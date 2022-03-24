@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Мультимедиа комплекс</string>
+    <string name="subject">Ma\'ruzalar</string>
+    <string name="seminar">Seminarlar</string>
+    <string name="presentation">Taqdimotlar</string>
+    <string name="maps">Xaritalar</string>
+    <string name="tests">Testlar</string>
+    <string name="books">Kitoblar</string>
+    <string name="pictures">Rasmlar</string>
+    <string name="questions">Nazorat\nSavollari</string>
+    <string name="documentation">Me\'yoriy\nHujjatlar</string>
+    <string name="authors">Mualliflar</string>
+    <string name="language_rus">Russian</string>
+    <string name="language_eng">English</string>
+    <string name="language_uzb">Uzbek</string>
+</resources>

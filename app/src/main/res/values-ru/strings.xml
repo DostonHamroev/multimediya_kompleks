@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Мультимедиа комплекс</string>
+
+    <!--    this is main menu titles-->
+    <string name="subject">Лекции</string>
+    <string name="seminar">Семинары</string>
+    <string name="presentation">Презентации</string>
+    <string name="maps">Карты</string>
+    <string name="tests">Тесты</string>
+    <string name="books">Книги</string>
+    <string name="pictures">Фотографий</string>
+    <string name="questions">Контрольные\nвопросы</string>
+    <string name="documentation">Нормативные\nдокументы</string>
+    <string name="authors">Авторы</string>
+    <string name="language_eng">Английский</string>
+    <string name="language_uzb">Узбекский</string>
+    <string name="language_rus">Русский</string>
+
+
+</resources>

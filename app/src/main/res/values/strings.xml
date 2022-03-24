@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Мультимедиа комплекс</string>
+
+    <!--    this is main menu titles-->
+    <string name="subject">Subjects</string>
+    <string name="seminar">Seminars</string>
+    <string name="presentation">Presentations</string>
+    <string name="maps">Maps</string>
+    <string name="tests">Tests</string>
+    <string name="books">Books</string>
+    <string name="pictures">Pictures</string>
+    <string name="questions">Questions</string>
+    <string name="documentation">Documentation</string>
+    <string name="authors">Authors</string>
+    <string name="language_rus">Russian</string>
+    <string name="language_eng">English</string>
+    <string name="language_uzb">Uzbek</string>
+
+
 </resources>
