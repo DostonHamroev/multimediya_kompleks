@@ -7,6 +7,8 @@
     <string name="maps">Xaritalar</string>
     <string name="tests">Testlar</string>
     <string name="books">Kitoblar</string>
+    <string name="crossword">Crossword</string>
+    <string name="swot">Swot</string>
     <string name="pictures">Rasmlar</string>
     <string name="questions">Nazorat\nSavollari</string>
     <string name="documentation">Me\'yoriy\nHujjatlar</string>
@@ -14,4 +16,7 @@
     <string name="language_rus">Russian</string>
     <string name="language_eng">English</string>
     <string name="language_uzb">Uzbek</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

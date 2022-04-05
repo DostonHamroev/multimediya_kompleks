@@ -50,8 +50,12 @@ dependencies {
 
     //bouncy
 //    api fileTree(includes: ['*.arr'], dir: 'libs')
-//    implementation files('libs/bouncy.arr')
+    implementation files('libs/bouncy.arr')
 //
 //    implementation 'androidx.recyclerview:recyclerview:1.2.1'
 //    implementation project(':bouncy')
+
+
+    //pdf viewer
+    implementation "com.dmitryborodin:pdfview-android:1.1.0"
 }
