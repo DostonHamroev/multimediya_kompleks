@@ -11,7 +11,6 @@ import uz.hamroev.multimediakompleks.databinding.FragmentSubjectsBinding
 
 class SubjectsFragment : Fragment() {
 
-
     lateinit var binding: FragmentSubjectsBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

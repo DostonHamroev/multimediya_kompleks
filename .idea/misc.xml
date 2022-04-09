@@ -3,13 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.22135416666666666" />
         <entry key="app/src/main/res/drawable/ic_flag_rus.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_menu.xml" value="0.1215" />
-        <entry key="app/src/main/res/layout/activity_home.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.1581196581196581" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/activity_test.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/dialog_language.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_presentations.xml" value="0.1581196581196581" />
+        <entry key="app/src/main/res/layout/fragment_questions.xml" value="0.1581196581196581" />
         <entry key="app/src/main/res/layout/fragment_seminar.xml" value="0.14764492753623187" />
         <entry key="app/src/main/res/layout/fragment_subjects.xml" value="0.14764492753623187" />
         <entry key="app/src/main/res/layout/header_main.xml" value="0.19270833333333334" />
