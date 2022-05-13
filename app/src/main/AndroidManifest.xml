@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MultimediaKompleks">
         <activity
+            android:name=".activity.PdfShowActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.TestActivity"
             android:exported="false" />
         <activity

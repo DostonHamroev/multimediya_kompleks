@@ -49,12 +49,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //bouncy
-//    api fileTree(includes: ['*.arr'], dir: 'libs')
-    implementation files('libs/bouncy.arr')
-//
-//    implementation 'androidx.recyclerview:recyclerview:1.2.1'
-//    implementation project(':bouncy')
-
+    implementation files('../libs/bouncy.aar')
 
     //pdf viewer
     implementation "com.dmitryborodin:pdfview-android:1.1.0"

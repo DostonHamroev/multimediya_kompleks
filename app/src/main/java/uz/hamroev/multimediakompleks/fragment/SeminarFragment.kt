@@ -1,14 +1,23 @@
 package uz.hamroev.multimediakompleks.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import uz.hamroev.multimediakompleks.R
+import uz.hamroev.multimediakompleks.activity.PdfShowActivity
+import uz.hamroev.multimediakompleks.adapter.ThemeAdapter
+import uz.hamroev.multimediakompleks.cache.Cache
 import uz.hamroev.multimediakompleks.databinding.FragmentSeminarBinding
+import uz.hamroev.multimediakompleks.model.Theme
 
 class SeminarFragment : Fragment() {
+
+
+    lateinit var list: ArrayList<Theme>
+    lateinit var themeAdapter: ThemeAdapter
 
 
     lateinit var binding: FragmentSeminarBinding
@@ -20,8 +29,30 @@ class SeminarFragment : Fragment() {
 
 
 
+        loadPdfs()
+        themeAdapter =
+            ThemeAdapter(binding.root.context, list, object : ThemeAdapter.OnMainClickListener {
+                override fun onClick(theme: Theme, position: Int) {
+                    when (position) {
+                        0 -> {
+                            Cache.fragmentName = "seminar"
+                            Cache.pdfName = "seminar1"
+                        }
+                    }
+                    startActivity(Intent(binding.root.context, PdfShowActivity::class.java))
+                }
+
+            })
+        binding.rv.adapter = themeAdapter
+
+
         return binding.root
 
+    }
+
+    private fun loadPdfs() {
+        list = ArrayList()
+        list.add(Theme("Семинар режалари 2021-22"))
     }
 
 

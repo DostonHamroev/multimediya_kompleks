@@ -24,6 +24,9 @@ class MainAdapter(
             itemMainBinding.main.setOnClickListener {
                 onMainClickListener.onClick(main, position)
             }
+            itemMainBinding.title.setOnClickListener {
+                onMainClickListener.onClick(main, position)
+            }
         }
 
     }

@@ -44,4 +44,22 @@ object Cache {
         }
 
 
+
+
+    var fragmentName: String?
+        get() = sharedPreferences.getString("fragmentname", "0")
+        set(value) = sharedPreferences.edit() {
+            if (value != null) {
+                it.putString("fragmentname", value)
+            }
+        }
+    var pdfName: String?
+        get() = sharedPreferences.getString("pdfname", "0")
+        set(value) = sharedPreferences.edit() {
+            if (value != null) {
+                it.putString("pdfname", value)
+            }
+        }
+
+
 }
