@@ -11,92 +11,135 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_swotFragment"
-            app:destination="@id/swotFragment" />
+            android:id="@+id/action_homeFragment_to_mavzularBoyichaFragment"
+            app:destination="@id/mavzularBoyichaFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_subjectsFragment"
-            app:destination="@id/subjectsFragment" />
+            android:id="@+id/action_homeFragment_to_mualliflarFragment"
+            app:destination="@id/mualliflarFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_nazoratSavollariFragment"
+            app:destination="@id/nazoratSavollariFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_nazoratSavollariFragment2"
+            app:destination="@id/nazoratSavollariFragment" />
         <action
             android:id="@+id/action_homeFragment_to_seminarFragment"
             app:destination="@id/seminarFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_questionsFragment"
-            app:destination="@id/questionsFragment" />
+            android:id="@+id/action_homeFragment_to_meyoriyHujjatFragment"
+            app:destination="@id/meyoriyHujjatFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_presentationsFragment"
-            app:destination="@id/presentationsFragment" />
+            android:id="@+id/action_homeFragment_to_seminarFragment2"
+            app:destination="@id/seminarFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_picturesFragment"
-            app:destination="@id/picturesFragment" />
+            android:id="@+id/action_homeFragment_to_swotFragment"
+            app:destination="@id/swotFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_mapsFragment"
-            app:destination="@id/mapsFragment" />
+            android:id="@+id/action_homeFragment_to_swotFragment2"
+            app:destination="@id/swotFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_documentationFragment"
-            app:destination="@id/documentationFragment" />
+            android:id="@+id/action_homeFragment_to_testFragment"
+            app:destination="@id/testFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_crosswordFragment"
-            app:destination="@id/crosswordFragment" />
+            android:id="@+id/action_homeFragment_to_xaritaFragment"
+            app:destination="@id/xaritaFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_booksFragment"
-            app:destination="@id/booksFragment" />
+            android:id="@+id/action_homeFragment_to_tezaurusFragment"
+            app:destination="@id/tezaurusFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_authorsFragment"
-            app:destination="@id/authorsFragment" />
+            android:id="@+id/action_homeFragment_to_maruzaFragment"
+            app:destination="@id/maruzaFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_kroswordFragment"
+            app:destination="@id/kroswordFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_fotoHujjatFragment"
+            app:destination="@id/fotoHujjatFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_elektronKutubxonaFragment"
+            app:destination="@id/elektronKutubxonaFragment" />
     </fragment>
     <fragment
-        android:id="@+id/authorsFragment"
-        android:name="uz.hamroev.multimediakompleks.fragment.AuthorsFragment"
-        android:label="fragment_authors"
-        tools:layout="@layout/fragment_authors" />
+        android:id="@+id/elektronKutubxonaFragment"
+        android:name="uz.hamroev.multimediakompleks.fragment.department.ElektronKutubxonaFragment"
+        android:label="fragment_elektron_kutubxona"
+        tools:layout="@layout/fragment_elektron_kutubxona" />
     <fragment
-        android:id="@+id/booksFragment"
-        android:name="uz.hamroev.multimediakompleks.fragment.BooksFragment"
-        android:label="fragment_books"
-        tools:layout="@layout/fragment_books" />
+        android:id="@+id/fotoHujjatFragment"
+        android:name="uz.hamroev.multimediakompleks.fragment.department.FotoHujjatFragment"
+        android:label="fragment_foto_hujjat"
+        tools:layout="@layout/fragment_foto_hujjat" />
     <fragment
-        android:id="@+id/crosswordFragment"
-        android:name="uz.hamroev.multimediakompleks.fragment.CrosswordFragment"
-        android:label="fragment_crossword"
-        tools:layout="@layout/fragment_crossword" />
+        android:id="@+id/kroswordFragment"
+        android:name="uz.hamroev.multimediakompleks.fragment.department.KroswordFragment"
+        android:label="fragment_krosword"
+        tools:layout="@layout/fragment_krosword" >
+        <action
+            android:id="@+id/action_kroswordFragment_to_krosswordPdfFragment"
+            app:destination="@id/krosswordPdfFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/documentationFragment"
-        android:name="uz.hamroev.multimediakompleks.fragment.DocumentationFragment"
-        android:label="fragment_documentation"
-        tools:layout="@layout/fragment_documentation" />
+        android:id="@+id/maruzaFragment"
+        android:name="uz.hamroev.multimediakompleks.fragment.department.MaruzaFragment"
+        android:label="fragment_maruza"
+        tools:layout="@layout/fragment_maruza" />
     <fragment
-        android:id="@+id/mapsFragment"
-        android:name="uz.hamroev.multimediakompleks.fragment.MapsFragment"
-        android:label="fragment_maps"
-        tools:layout="@layout/fragment_maps" />
+        android:id="@+id/mavzularBoyichaFragment"
+        android:name="uz.hamroev.multimediakompleks.fragment.department.MavzularBoyichaFragment"
+        android:label="fragment_mavzular_boyicha"
+        tools:layout="@layout/fragment_mavzular_boyicha" />
     <fragment
-        android:id="@+id/picturesFragment"
-        android:name="uz.hamroev.multimediakompleks.fragment.PicturesFragment"
-        android:label="fragment_pictures"
-        tools:layout="@layout/fragment_pictures" />
+        android:id="@+id/meyoriyHujjatFragment"
+        android:name="uz.hamroev.multimediakompleks.fragment.department.MeyoriyHujjatFragment"
+        android:label="fragment_meyoriy_hujjat"
+        tools:layout="@layout/fragment_meyoriy_hujjat" >
+        <action
+            android:id="@+id/action_meyoriyHujjatFragment_to_meyoriyPdfFragment"
+            app:destination="@id/meyoriyPdfFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/presentationsFragment"
-        android:name="uz.hamroev.multimediakompleks.fragment.PresentationsFragment"
-        android:label="fragment_presentations"
-        tools:layout="@layout/fragment_presentations" />
+        android:id="@+id/mualliflarFragment"
+        android:name="uz.hamroev.multimediakompleks.fragment.department.MualliflarFragment"
+        android:label="fragment_mualliflar"
+        tools:layout="@layout/fragment_mualliflar" />
     <fragment
-        android:id="@+id/questionsFragment"
-        android:name="uz.hamroev.multimediakompleks.fragment.QuestionsFragment"
-        android:label="fragment_questions"
-        tools:layout="@layout/fragment_questions" />
+        android:id="@+id/nazoratSavollariFragment"
+        android:name="uz.hamroev.multimediakompleks.fragment.department.NazoratSavollariFragment"
+        android:label="fragment_nazorat_savollari"
+        tools:layout="@layout/fragment_nazorat_savollari" />
     <fragment
         android:id="@+id/seminarFragment"
-        android:name="uz.hamroev.multimediakompleks.fragment.SeminarFragment"
+        android:name="uz.hamroev.multimediakompleks.fragment.department.SeminarFragment"
         android:label="fragment_seminar"
         tools:layout="@layout/fragment_seminar" />
     <fragment
-        android:id="@+id/subjectsFragment"
-        android:name="uz.hamroev.multimediakompleks.fragment.SubjectsFragment"
-        android:label="fragment_subjects"
-        tools:layout="@layout/fragment_subjects" />
-    <fragment
         android:id="@+id/swotFragment"
-        android:name="uz.hamroev.multimediakompleks.fragment.SwotFragment"
+        android:name="uz.hamroev.multimediakompleks.fragment.department.SwotFragment"
         android:label="fragment_swot"
         tools:layout="@layout/fragment_swot" />
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="uz.hamroev.multimediakompleks.fragment.department.TestFragment"
+        android:label="fragment_test"
+        tools:layout="@layout/fragment_test" />
+    <fragment
+        android:id="@+id/tezaurusFragment"
+        android:name="uz.hamroev.multimediakompleks.fragment.department.TezaurusFragment"
+        android:label="fragment_tezaurus"
+        tools:layout="@layout/fragment_tezaurus" />
+    <fragment
+        android:id="@+id/xaritaFragment"
+        android:name="uz.hamroev.multimediakompleks.fragment.department.XaritaFragment"
+        android:label="fragment_xarita"
+        tools:layout="@layout/fragment_xarita" />
+    <fragment
+        android:id="@+id/meyoriyPdfFragment"
+        android:name="uz.hamroev.multimediakompleks.fragment.department.meyoriy.MeyoriyPdfFragment"
+        android:label="fragment_meyoriy_pdf"
+        tools:layout="@layout/fragment_meyoriy_pdf" />
+    <fragment
+        android:id="@+id/krosswordPdfFragment"
+        android:name="uz.hamroev.multimediakompleks.fragment.department.krossword.KrosswordPdfFragment"
+        android:label="fragment_krossword_pdf"
+        tools:layout="@layout/fragment_krossword_pdf" />
 </navigation>

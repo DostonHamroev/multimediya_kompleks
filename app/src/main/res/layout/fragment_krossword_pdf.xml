@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment.department.SwotFragment">
-
+    tools:context=".fragment.department.krossword.KrosswordPdfFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -14,14 +13,14 @@
 
         <LinearLayout
             android:id="@+id/first"
-            android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
-            android:background="@color/blue2"
-            android:orientation="horizontal"
             app:layout_constraintBottom_toTopOf="@id/second"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/blue2"
+            android:orientation="horizontal">
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -30,14 +29,14 @@
 
                 <ImageView
                     android:id="@+id/back_btn"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginStart="10dp"
                     android:padding="8sp"
-                    android:src="@drawable/ic_back"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:src="@drawable/ic_back" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -45,21 +44,20 @@
 
         <LinearLayout
             android:id="@+id/second"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/first">
+            app:layout_constraintTop_toBottomOf="@id/first"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
 
-            <com.factor.bouncy.BouncyRecyclerView
-                android:id="@+id/rv_theme"
+            <com.pdfview.PDFView
+                android:id="@+id/pdf_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/item_theme" />
+                android:layout_height="match_parent" />
 
 
         </LinearLayout>

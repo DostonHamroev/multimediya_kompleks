@@ -6,29 +6,23 @@
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:layout_margin="10dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="5dp">
 
         <LinearLayout
-            android:padding="10dp"
-            android:background="@drawable/back_theme"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center">
 
-            <TextView
-                android:id="@+id/pdf_name"
+            <ImageView
+                android:id="@+id/image_map"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fontFamily="@font/poppins_medium"
-                android:padding="10dp"
-                android:text="8-mavzu. SWOT va T texnologiyalari"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                android:textStyle="normal" />
+                android:scaleType="centerCrop"
+                android:src="@drawable/map1" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

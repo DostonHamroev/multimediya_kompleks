@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment.department.SwotFragment">
+    tools:context=".fragment.department.TezaurusFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -47,6 +47,7 @@
             android:id="@+id/second"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -54,18 +55,34 @@
             app:layout_constraintTop_toBottomOf="@id/first">
 
 
-            <com.factor.bouncy.BouncyRecyclerView
-                android:id="@+id/rv_theme"
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie_animation"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:padding="15dp"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="download.json"
+                app:lottie_loop="true"
+                app:lottie_repeatMode="restart" />
+
+            <com.pdfview.PDFView
+                android:id="@+id/pdf_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/item_theme" />
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:visibility="gone" />
 
 
         </LinearLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </LinearLayout>

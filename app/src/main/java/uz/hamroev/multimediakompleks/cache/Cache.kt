@@ -44,8 +44,6 @@ object Cache {
         }
 
 
-
-
     var fragmentName: String?
         get() = sharedPreferences.getString("fragmentname", "0")
         set(value) = sharedPreferences.edit() {
@@ -53,11 +51,51 @@ object Cache {
                 it.putString("fragmentname", value)
             }
         }
+
     var pdfName: String?
         get() = sharedPreferences.getString("pdfname", "0")
         set(value) = sharedPreferences.edit() {
             if (value != null) {
                 it.putString("pdfname", value)
+            }
+        }
+
+    var fotoHujjat: String?
+        get() = sharedPreferences.getString("fotohujjat", "")
+        set(value) = sharedPreferences.edit() {
+            if (value != null) {
+                it.putString("fotohujjat", value)
+            }
+        }
+    var teza: String?
+        get() = sharedPreferences.getString("teza", "")
+        set(value) = sharedPreferences.edit() {
+            if (value != null) {
+                it.putString("teza", value)
+            }
+        }
+
+
+    var doc1: String?
+        get() = sharedPreferences.getString("doc1", "")
+        set(value) = sharedPreferences.edit() {
+            if (value != null) {
+                it.putString("doc1", value)
+            }
+        }
+    var kross: String?
+        get() = sharedPreferences.getString("kross", "")
+        set(value) = sharedPreferences.edit() {
+            if (value != null) {
+                it.putString("kross", value)
+            }
+        }
+
+    var swot: String?
+        get() = sharedPreferences.getString("swot", "")
+        set(value) = sharedPreferences.edit() {
+            if (value != null) {
+                it.putString("swot", value)
             }
         }
 
