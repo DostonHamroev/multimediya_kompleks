@@ -33,41 +33,7 @@ class HomeActivity : AppCompatActivity() {
 
         checkLanguage()
 
-        binding.cardLanguage.setOnClickListener {
-            val alertDialog = AlertDialog.Builder(binding.root.context)
-            val dialog = alertDialog.create()
-            val bindingLanguage =
-                DialogLanguageBinding.inflate(LayoutInflater.from(applicationContext))
-            dialog.setView(bindingLanguage.root)
-            dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-            dialog.setCancelable(true)
 
-            bindingLanguage.textRu.text = resources.getString(R.string.language_rus)
-            bindingLanguage.textUk.text = resources.getString(R.string.language_eng)
-            bindingLanguage.textUz.text = resources.getString(R.string.language_uzb)
-
-            bindingLanguage.russian.setOnClickListener {
-                Cache.language = "ru"
-                navController.popBackStack()
-                navController.navigate(R.id.homeFragment)
-                dialog.dismiss()
-            }
-            bindingLanguage.uk.setOnClickListener {
-                Cache.language = "en"
-                navController.popBackStack()
-                navController.navigate(R.id.homeFragment)
-                dialog.dismiss()
-            }
-            bindingLanguage.uzb.setOnClickListener {
-                Cache.language = "uz"
-                navController.popBackStack()
-                navController.navigate(R.id.homeFragment)
-                dialog.dismiss()
-            }
-
-            dialog.show()
-
-        }
 
 
     }
@@ -78,6 +44,8 @@ class HomeActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         return Navigation.findNavController(this, R.id.my_nav_host_fragment).navigateUp()
     }
+
+
 
     private fun checkLanguage() {
         when (Cache.language) {
@@ -92,6 +60,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
     }
+
     fun setAppLocale(context: Context, language: String) {
         val locale = Locale(language)
         Locale.setDefault(locale)

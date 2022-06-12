@@ -50,7 +50,19 @@ dependencies {
 
     //bouncy
     implementation files('../libs/bouncy.aar')
-
     //pdf viewer
     implementation "com.dmitryborodin:pdfview-android:1.1.0"
+    //lottie Animation
+    implementation 'com.airbnb.android:lottie:4.2.2'
+    //animation
+    implementation 'com.github.gayanvoice:android-animations:1.0.2'
+    //Click Shrink Effect
+    implementation 'com.github.realpacific:click-shrink-effect:2.0'
+    // check Internet
+    implementation 'com.github.raheemadamboev:check-internet-android:1.0.1'
+    // circle image view
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //horizontal progress bar
+    implementation "com.github.skydoves:progressview:1.1.3"
+
 }

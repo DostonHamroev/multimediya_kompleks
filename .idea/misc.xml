@@ -4,11 +4,26 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.22135416666666666" />
+        <entry key="app/src/main/res/drawable/back_department.xml" value="0.1515" />
+        <entry key="app/src/main/res/drawable/back_main_linear.xml" value="0.1205" />
         <entry key="app/src/main/res/drawable/back_theme.xml" value="0.136" />
         <entry key="app/src/main/res/drawable/background.xml" value="0.136" />
+        <entry key="app/src/main/res/drawable/ic_crossword.xml" value="0.1515" />
+        <entry key="app/src/main/res/drawable/ic_documents.xml" value="0.1515" />
+        <entry key="app/src/main/res/drawable/ic_electron_library.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/ic_flag_rus.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_images.xml" value="0.1515" />
+        <entry key="app/src/main/res/drawable/ic_maps.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/ic_menu.xml" value="0.1215" />
-        <entry key="app/src/main/res/layout/activity_home.xml" value="0.1581196581196581" />
+        <entry key="app/src/main/res/drawable/ic_questions.xml" value="0.1515" />
+        <entry key="app/src/main/res/drawable/ic_seminar.xml" value="0.2045" />
+        <entry key="app/src/main/res/drawable/ic_subject.xml" value="0.1515" />
+        <entry key="app/src/main/res/drawable/ic_swot.xml" value="0.1515" />
+        <entry key="app/src/main/res/drawable/ic_test.xml" value="0.1515" />
+        <entry key="app/src/main/res/drawable/ic_tezaurus.xml" value="0.1515" />
+        <entry key="app/src/main/res/drawable/ic_theme_library.xml" value="0.1515" />
+        <entry key="app/src/main/res/drawable/ic_users.xml" value="0.1515" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/activity_pdf_show.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/activity_test.xml" value="0.19270833333333334" />
@@ -17,7 +32,7 @@
         <entry key="app/src/main/res/layout/fragment_books.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/fragment_crossword.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/fragment_documentation.xml" value="0.19791666666666666" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.11" />
         <entry key="app/src/main/res/layout/fragment_maps.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/fragment_pictures.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/fragment_presentations.xml" value="0.1581196581196581" />
@@ -26,7 +41,9 @@
         <entry key="app/src/main/res/layout/fragment_subjects.xml" value="0.14764492753623187" />
         <entry key="app/src/main/res/layout/fragment_swot.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/header_main.xml" value="0.19270833333333334" />
+        <entry key="app/src/main/res/layout/item_deparment.xml" value="0.37590711175616837" />
         <entry key="app/src/main/res/layout/item_main.xml" value="0.19270833333333334" />
+        <entry key="app/src/main/res/layout/item_round.xml" value="0.19583333333333333" />
         <entry key="app/src/main/res/layout/item_theme.xml" value="0.22" />
       </map>
     </option>
