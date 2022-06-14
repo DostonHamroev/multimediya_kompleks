@@ -163,30 +163,78 @@ class HomeFragment : Fragment() {
 
     private fun loadDepartmentData() {
         listDepartment = ArrayList()
-        listDepartment.add(Department(R.drawable.ic_seminar, "Семинарлар", 93))
-        listDepartment.add(Department(R.drawable.ic_subject, "Маъруза", 85))
-        listDepartment.add(Department(R.drawable.ic_images, "Фотоҳужжатлар", 22))
-        listDepartment.add(Department(R.drawable.ic_documents, "Меъёрий хужжатлар", 35))
+        listDepartment.add(
+            Department(
+                R.drawable.ic_seminar,
+                "Семинарлар",
+                Cache.seminarfoiz!!.toShort()
+            )
+        )
+        listDepartment.add(
+            Department(
+                R.drawable.ic_subject,
+                "Маъруза",
+                Cache.maruzafoiz!!.toShort()
+            )
+        )
+        listDepartment.add(
+            Department(
+                R.drawable.ic_images,
+                "Фотоҳужжатлар",
+                Cache.fotohujjatfoiz!!.toShort()
+            )
+        )
+        listDepartment.add(
+            Department(
+                R.drawable.ic_documents,
+                "Меъёрий хужжатлар",
+                Cache.meyoriyhujjatfoiz!!.toShort()
+            )
+        )
         listDepartment.add(
             Department(
                 R.drawable.ic_electron_library,
-                "Электрон библиографияh",
-                0
+                "Электрон библиография",
+                Cache.elektronbibiofoiz!!.toShort()
             )
         )
         listDepartment.add(
             Department(
                 R.drawable.ic_theme_library,
                 "Мавзулар бўйича еклекрон кутубхона",
-                55
+                Cache.maruzalarboyichakutubxonafoiz!!.toShort()
             )
         )
-        listDepartment.add(Department(R.drawable.ic_maps, "Ҳариталар", 67))
-        listDepartment.add(Department(R.drawable.ic_crossword, "Кроссвордлар", 49))
-        listDepartment.add(Department(R.drawable.ic_swot, "Сwот", 63))
-        listDepartment.add(Department(R.drawable.ic_tezaurus, "Тезаурус", 39))
-        listDepartment.add(Department(R.drawable.ic_test, "Тестлар", 75))
-        listDepartment.add(Department(R.drawable.ic_questions, "Назорат саволлари", 95))
+        listDepartment.add(
+            Department(
+                R.drawable.ic_maps,
+                "Ҳариталар",
+                Cache.haritafoiz!!.toShort()
+            )
+        )
+        listDepartment.add(
+            Department(
+                R.drawable.ic_crossword,
+                "Кроссвордлар",
+                Cache.krosswordfoiz!!.toShort()
+            )
+        )
+        listDepartment.add(Department(R.drawable.ic_swot, "Swот", Cache.swotfoiz!!.toShort()))
+        listDepartment.add(
+            Department(
+                R.drawable.ic_tezaurus,
+                "Тезаурус",
+                Cache.tezarurusfoiz!!.toShort()
+            )
+        )
+        listDepartment.add(Department(R.drawable.ic_test, "Тестлар", Cache.testfoiz!!.toShort()))
+        listDepartment.add(
+            Department(
+                R.drawable.ic_questions,
+                "Назорат саволлари",
+                Cache.nazoratsavollarifoiz!!.toShort()
+            )
+        )
         listDepartment.add(Department(R.drawable.ic_users, "Муалиффлар", 100))
 
     }

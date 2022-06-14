@@ -31,22 +31,28 @@ class KrosswordPdfFragment : Fragment() {
     private fun loadPdfs() {
         when (Cache.kross) {
             "1" -> {
+                Cache.krosswordfoiz = 20
                 binding.pdfView.fromAsset("cross8.pdf").show()
             }
             "2" -> {
+                Cache.krosswordfoiz = 40
                 binding.pdfView.fromAsset("cross9.pdf").show()
             }
             "3" -> {
+                Cache.krosswordfoiz = 60
                 binding.pdfView.fromAsset("cross10.pdf").show()
             }
             "4" -> {
+                Cache.krosswordfoiz = 80
                 binding.pdfView.fromAsset("cross11one.pdf").show()
             }
             "5" -> {
+                Cache.krosswordfoiz = 100
                 binding.pdfView.fromAsset("cross11two.pdf").show()
             }
         }
     }
+
 
 
 }

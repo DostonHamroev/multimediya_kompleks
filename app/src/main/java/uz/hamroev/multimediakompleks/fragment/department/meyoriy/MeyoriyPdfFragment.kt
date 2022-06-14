@@ -31,21 +31,27 @@ class MeyoriyPdfFragment : Fragment() {
     private fun loadPdfs() {
         when (Cache.doc1) {
             "1" -> {
+                Cache.meyoriyhujjatfoiz = 17
                 binding.pdfView.fromAsset("doc1.pdf").show()
             }
             "2" -> {
+                Cache.meyoriyhujjatfoiz = 34
                 binding.pdfView.fromAsset("doc2.pdf").show()
             }
             "3" -> {
+                Cache.meyoriyhujjatfoiz = 50
                 binding.pdfView.fromAsset("doc3.pdf").show()
             }
             "4" -> {
+                Cache.meyoriyhujjatfoiz = 66
                 binding.pdfView.fromAsset("doc4.pdf").show()
             }
             "5" -> {
+                Cache.meyoriyhujjatfoiz = 83
                 binding.pdfView.fromAsset("doc5.pdf").show()
             }
             "6" -> {
+                Cache.meyoriyhujjatfoiz = 100
                 binding.pdfView.fromAsset("doc6.pdf").show()
             }
         }

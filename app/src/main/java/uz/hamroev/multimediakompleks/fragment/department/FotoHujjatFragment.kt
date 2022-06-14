@@ -142,5 +142,9 @@ class FotoHujjatFragment : Fragment() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        Cache.fotohujjatfoiz = 100
+    }
 
 }

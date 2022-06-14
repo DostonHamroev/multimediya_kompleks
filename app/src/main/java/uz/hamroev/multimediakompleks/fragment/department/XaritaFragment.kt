@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import uz.hamroev.multimediakompleks.R
 import uz.hamroev.multimediakompleks.adapter.MapAdapter
+import uz.hamroev.multimediakompleks.cache.Cache
 import uz.hamroev.multimediakompleks.databinding.FragmentXaritaBinding
 import uz.hamroev.multimediakompleks.model.Map
 
@@ -24,6 +25,8 @@ class XaritaFragment : Fragment() {
     ): View {
         binding = FragmentXaritaBinding.inflate(layoutInflater)
 
+
+        Cache.haritafoiz = 100
         binding.backBtn.setOnClickListener {
             findNavController().popBackStack()
         }

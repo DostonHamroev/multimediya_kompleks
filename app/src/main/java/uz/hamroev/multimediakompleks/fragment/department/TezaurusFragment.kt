@@ -28,6 +28,8 @@ class TezaurusFragment : Fragment() {
     ): View {
         binding = FragmentTezaurusBinding.inflate(layoutInflater)
 
+
+        Cache.tezarurusfoiz = 100
         checkIsDownload()
         binding.backBtn.setOnClickListener {
             findNavController().popBackStack()

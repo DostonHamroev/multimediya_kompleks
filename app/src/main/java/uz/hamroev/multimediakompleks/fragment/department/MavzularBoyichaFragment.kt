@@ -22,6 +22,8 @@ class MavzularBoyichaFragment : Fragment() {
     ): View {
         binding = FragmentMavzularBoyichaBinding.inflate(layoutInflater)
 
+
+        Cache.maruzalarboyichakutubxonafoiz = 100
         loadPdf()
         binding.backBtn.setOnClickListener {
             findNavController().popBackStack()

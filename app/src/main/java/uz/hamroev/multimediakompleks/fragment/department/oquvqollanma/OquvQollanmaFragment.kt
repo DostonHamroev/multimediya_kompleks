@@ -33,28 +33,8 @@ class OquvQollanmaFragment : Fragment() {
         themeAdapter =
             ThemeAdapter(binding.root.context, list, object : ThemeAdapter.OnMainClickListener {
                 override fun onClick(theme: Theme, position: Int) {
-                    when (position) {
-                        0 -> {
-                            findNavController().navigate(R.id.autoReferatPdfFragment)
-                            Cache.autoReferat = "1"
-                        }
-                        1 -> {
-                            findNavController().navigate(R.id.autoReferatPdfFragment)
-                            Cache.autoReferat = "2"
-                        }
-                        2 -> {
-                            findNavController().navigate(R.id.autoReferatPdfFragment)
-                            Cache.autoReferat = "3"
-                        }
-                        3 -> {
-                            findNavController().navigate(R.id.autoReferatPdfFragment)
-                            Cache.autoReferat = "4"
-                        }
-                        4 -> {
-                            findNavController().navigate(R.id.autoReferatPdfFragment)
-                            Cache.autoReferat = "5"
-                        }
-                    }
+                    Cache.oquvQollanma = "${position + 1}"
+                    findNavController().navigate(R.id.oquvQollanmaPdfFragment)
                 }
             })
         binding.rvTheme.adapter = themeAdapter
@@ -65,11 +45,28 @@ class OquvQollanmaFragment : Fragment() {
 
     private fun loadTheme() {
         list = ArrayList()
-        list.add(Theme("Саидбобоева Г.Н. Туркистон ўлкасини... автореф. 2020"))
-        list.add(Theme("Тоғаева А.З. Тошкент-Оренбург темир йўли... автореф. 2010"))
-        list.add(Theme("Усаров У.А. Россия империясининг Туркистон ўлкасидаги ер-сув... автореф. 2021"))
-        list.add(Theme("Хамраева Т.Р. Создание статистической службы... автореф. 2011"))
-        list.add(Theme("Ҳайитов Ж.Ш. Туркистонда янги экин навларининг тарқалиши... автореф. 2020"))
+        list.add(Theme("1937-1938-yillardagi katta qirg'in... 2013"))
+        list.add(Theme("Абдураҳимова Н.А. Туркистонда чор мустамлака тизими. 2002"))
+        list.add(Theme("Алимова Д. ва б. Маҳмудхўжа Беҳбудий... 1999"))
+        list.add(Theme("Ирзаев Б. Катта қирғиннинг... 2014"))
+        list.add(Theme("Ирзаев Б. Туркистон жадидларининг Кўмак ташкилоти. 2016"))
+        list.add(Theme("Исмоил Гаспринский ва Туркистон. 2005"))
+        list.add(Theme("Исмоилова Ж.Ҳ. ...Тошкентнинг янги шаҳар қисми тарихи. 2004"))
+        list.add(Theme("Исоқов З. Фарғона водийси анъанавий... 2011"))
+        list.add(Theme("Каримов Н. 1937-1938 йиллардаги... 2015"))
+        list.add(Theme("Мусаев Н. ... Туркистонда саноат ... 2008"))
+        list.add(Theme("Мустабид тузумнинг Ўзбекистон миллий бойликларини талаш сиёсат... 2000"))
+        list.add(Theme("Положение об управлении Туркестанского края. 1911"))
+        list.add(Theme("Ражабов Қ. Файзулла Хўжаев. 2011"))
+        list.add(Theme("Рашидов А. Акам ҳақида. 1992"))
+        list.add(Theme("Тарихнинг номаълум саҳифалари. 1-китоб. 2009"))
+        list.add(Theme("Тарихнинг номаълум саҳифалари. 2-китоб. 2010"))
+        list.add(Theme("Тарихнинг номаълум саҳифалари. 3-китоб. 2012"))
+        list.add(Theme("Тарихнинг номаълум саҳифалари. 4-китоб. 2013"))
+        list.add(Theme("Тарихнинг номаълум саҳифалари. 5-китоб. 2016"))
+        list.add(Theme("Тарихнинг номаълум саҳифалари. 6-китоб. 2017"))
+        list.add(Theme("Тарихнинг номаълум саҳифалари. 7-китоб. 2018"))
+        list.add(Theme("Ҳасанов Б. Катта қирғиннинг... 2014"))
 
     }
 

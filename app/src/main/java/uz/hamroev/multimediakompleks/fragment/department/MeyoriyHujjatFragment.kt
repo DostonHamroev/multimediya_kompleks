@@ -36,26 +36,32 @@ class MeyoriyHujjatFragment : Fragment() {
                 override fun onClick(theme: Theme, position: Int) {
                     when (position) {
                         0 -> {
+                            Cache.meyoriyhujjatfoiz = 17
                             findNavController().navigate(R.id.meyoriyPdfFragment)
                             Cache.doc1 = "1"
                         }
                         1 -> {
+                            Cache.meyoriyhujjatfoiz = 33
                             findNavController().navigate(R.id.meyoriyPdfFragment)
                             Cache.doc1 = "2"
                         }
                         2 -> {
+                            Cache.meyoriyhujjatfoiz = 50
                             findNavController().navigate(R.id.meyoriyPdfFragment)
                             Cache.doc1 = "3"
                         }
                         3 -> {
+                            Cache.meyoriyhujjatfoiz = 67
                             findNavController().navigate(R.id.meyoriyPdfFragment)
                             Cache.doc1 = "4"
                         }
                         4 -> {
+                            Cache.meyoriyhujjatfoiz = 84
                             findNavController().navigate(R.id.meyoriyPdfFragment)
                             Cache.doc1 = "5"
                         }
                         5 -> {
+                            Cache.meyoriyhujjatfoiz = 100
                             findNavController().navigate(R.id.meyoriyPdfFragment)
                             Cache.doc1 = "6"
                         }

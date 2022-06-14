@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import uz.hamroev.multimediakompleks.R
 import uz.hamroev.multimediakompleks.adapter.SectionAdapter
+import uz.hamroev.multimediakompleks.cache.Cache
 import uz.hamroev.multimediakompleks.databinding.FragmentElektronKutubxonaBinding
 import uz.hamroev.multimediakompleks.model.Section
 
@@ -36,15 +37,19 @@ class ElektronKutubxonaFragment : Fragment() {
                 override fun onClick(section: Section, position: Int) {
                     when (position) {
                         0 -> {
+                            Cache.elektronbibiofoiz = 25
                             findNavController().navigate(R.id.autoReferatFragment)
                         }
                         1 -> {
+                            Cache.elektronbibiofoiz = 50
                             findNavController().navigate(R.id.monografiyaFragment)
                         }
                         2 -> {
+                            Cache.elektronbibiofoiz = 75
                             findNavController().navigate(R.id.oquvQollanmaFragment)
                         }
                         3 -> {
+                            Cache.elektronbibiofoiz = 100
                             findNavController().navigate(R.id.biblioVaHavolaPdfFragment)
                         }
                     }

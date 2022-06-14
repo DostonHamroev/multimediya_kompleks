@@ -9,6 +9,7 @@
         <entry key="app/src/main/res/drawable/back_theme.xml" value="0.136" />
         <entry key="app/src/main/res/drawable/background.xml" value="0.136" />
         <entry key="app/src/main/res/drawable/ic_back.xml" value="0.1515" />
+        <entry key="app/src/main/res/drawable/ic_book.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/ic_crossword.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/ic_documents.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/ic_electron_library.xml" value="0.1515" />
@@ -51,6 +52,7 @@
         <entry key="app/src/main/res/layout/fragment_mualliflar.xml" value="0.196875" />
         <entry key="app/src/main/res/layout/fragment_nazorat_savollari.xml" value="0.196875" />
         <entry key="app/src/main/res/layout/fragment_oquv_qollanma.xml" value="0.12434210526315789" />
+        <entry key="app/src/main/res/layout/fragment_oquv_qollanma_pdf.xml" value="0.12434210526315789" />
         <entry key="app/src/main/res/layout/fragment_pictures.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/fragment_presentations.xml" value="0.1581196581196581" />
         <entry key="app/src/main/res/layout/fragment_questions.xml" value="0.1581196581196581" />

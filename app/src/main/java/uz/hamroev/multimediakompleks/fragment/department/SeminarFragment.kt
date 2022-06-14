@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import uz.hamroev.multimediakompleks.R
+import uz.hamroev.multimediakompleks.cache.Cache
 import uz.hamroev.multimediakompleks.databinding.FragmentSeminarBinding
 
 
@@ -31,6 +32,11 @@ class SeminarFragment : Fragment() {
 
     private fun loadPdf() {
         binding.pdfView.fromAsset("seminar.pdf").show()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Cache.seminarfoiz = 100
     }
 
 

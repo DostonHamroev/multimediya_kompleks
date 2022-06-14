@@ -35,22 +35,27 @@ class SwotFragment : Fragment() {
                 override fun onClick(theme: Theme, position: Int) {
                     when (position) {
                         0 -> {
+                            Cache.swotfoiz = 20
                             findNavController().navigate(R.id.krosswordPdfFragment)
                             Cache.kross = "1"
                         }
                         1 -> {
+                            Cache.swotfoiz = 40
                             findNavController().navigate(R.id.krosswordPdfFragment)
                             Cache.kross = "2"
                         }
                         2 -> {
+                            Cache.swotfoiz = 60
                             findNavController().navigate(R.id.krosswordPdfFragment)
                             Cache.kross = "3"
                         }
                         3 -> {
+                            Cache.swotfoiz = 80
                             findNavController().navigate(R.id.krosswordPdfFragment)
                             Cache.kross = "4"
                         }
                         4 -> {
+                            Cache.swotfoiz = 100
                             findNavController().navigate(R.id.krosswordPdfFragment)
                             Cache.kross = "5"
                         }

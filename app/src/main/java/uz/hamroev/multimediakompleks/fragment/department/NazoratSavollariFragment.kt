@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import uz.hamroev.multimediakompleks.R
+import uz.hamroev.multimediakompleks.cache.Cache
 import uz.hamroev.multimediakompleks.databinding.FragmentNazoratSavollariBinding
 
 class NazoratSavollariFragment : Fragment() {
@@ -19,6 +20,8 @@ class NazoratSavollariFragment : Fragment() {
     ): View {
         binding = FragmentNazoratSavollariBinding.inflate(layoutInflater)
 
+
+        Cache.nazoratsavollarifoiz = 100
 
         loadPdf()
         binding.backBtn.setOnClickListener {

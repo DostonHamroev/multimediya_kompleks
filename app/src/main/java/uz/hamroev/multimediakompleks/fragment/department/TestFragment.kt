@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import uz.hamroev.multimediakompleks.R
+import uz.hamroev.multimediakompleks.cache.Cache
 import uz.hamroev.multimediakompleks.databinding.FragmentTestBinding
 
 class TestFragment : Fragment() {
@@ -20,6 +21,8 @@ class TestFragment : Fragment() {
         binding = FragmentTestBinding.inflate(layoutInflater)
 
 
+
+        Cache.testfoiz = 100
         loadPdf()
         binding.backBtn.setOnClickListener {
             findNavController().popBackStack()
