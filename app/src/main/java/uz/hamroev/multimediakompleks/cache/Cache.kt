@@ -99,5 +99,13 @@ object Cache {
             }
         }
 
+    var autoReferat: String?
+        get() = sharedPreferences.getString("autoreferat", "")
+        set(value) = sharedPreferences.edit() {
+            if (value != null) {
+                it.putString("autoreferat", value)
+            }
+        }
+
 
 }

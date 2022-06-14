@@ -63,7 +63,14 @@
         android:id="@+id/elektronKutubxonaFragment"
         android:name="uz.hamroev.multimediakompleks.fragment.department.ElektronKutubxonaFragment"
         android:label="fragment_elektron_kutubxona"
-        tools:layout="@layout/fragment_elektron_kutubxona" />
+        tools:layout="@layout/fragment_elektron_kutubxona" >
+        <action
+            android:id="@+id/action_elektronKutubxonaFragment_to_biblioVaHavolaPdfFragment"
+            app:destination="@id/biblioVaHavolaPdfFragment" />
+        <action
+            android:id="@+id/action_elektronKutubxonaFragment_to_autoReferatFragment"
+            app:destination="@id/autoReferatFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fotoHujjatFragment"
         android:name="uz.hamroev.multimediakompleks.fragment.department.FotoHujjatFragment"
@@ -142,4 +149,23 @@
         android:name="uz.hamroev.multimediakompleks.fragment.department.krossword.KrosswordPdfFragment"
         android:label="fragment_krossword_pdf"
         tools:layout="@layout/fragment_krossword_pdf" />
+    <fragment
+        android:id="@+id/biblioVaHavolaPdfFragment"
+        android:name="uz.hamroev.multimediakompleks.fragment.department.bibliovahavola.BiblioVaHavolaPdfFragment"
+        android:label="fragment_biblio_va_havola_pdf"
+        tools:layout="@layout/fragment_biblio_va_havola_pdf" />
+    <fragment
+        android:id="@+id/autoReferatFragment"
+        android:name="uz.hamroev.multimediakompleks.fragment.department.avtorefarat.AutoReferatFragment"
+        android:label="fragment_auto_referat"
+        tools:layout="@layout/fragment_auto_referat" >
+        <action
+            android:id="@+id/action_autoReferatFragment_to_autoReferatPdfFragment"
+            app:destination="@id/autoReferatPdfFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/autoReferatPdfFragment"
+        android:name="uz.hamroev.multimediakompleks.fragment.department.avtorefarat.AutoReferatPdfFragment"
+        android:label="fragment_auto_referat_pdf"
+        tools:layout="@layout/fragment_auto_referat_pdf" />
 </navigation>

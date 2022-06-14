@@ -8,25 +8,14 @@
     tools:context=".MainActivity">
 
 
-    <com.skydoves.progressview.ProgressView
-        android:id="@+id/progressView1"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_margin="10dp"
-        android:layout_height="35dp"
-        app:progressView_autoAnimate="true"
-        app:progressView_colorBackground="@color/white"
-        app:progressView_colorProgress="@color/blue"
-        app:progressView_labelColorInner="@color/white"
-        app:progressView_labelColorOuter="@color/black"
-        app:progressView_labelSize="13sp"
-        app:progressView_labelSpace="10dp"
-        app:progressView_labelText="achieve 65%"
-        app:progressView_labelTypeface="bold"
-        app:progressView_max="100"
-        app:progressView_min="15"
-        app:progressView_padding="1dp"
-        app:progressView_progress="40"
-        app:progressView_progressFromPrevious="true"
-        app:progressView_radius="15dp" />
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_medium"/>
 
 </LinearLayout>
