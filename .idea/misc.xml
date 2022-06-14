@@ -46,8 +46,11 @@
         <entry key="app/src/main/res/layout/fragment_mavzular_boyicha.xml" value="0.196875" />
         <entry key="app/src/main/res/layout/fragment_meyoriy_hujjat.xml" value="0.196875" />
         <entry key="app/src/main/res/layout/fragment_meyoriy_pdf.xml" value="0.196875" />
+        <entry key="app/src/main/res/layout/fragment_monografiya.xml" value="0.12434210526315789" />
+        <entry key="app/src/main/res/layout/fragment_monografiya_pdf.xml" value="0.12434210526315789" />
         <entry key="app/src/main/res/layout/fragment_mualliflar.xml" value="0.196875" />
         <entry key="app/src/main/res/layout/fragment_nazorat_savollari.xml" value="0.196875" />
+        <entry key="app/src/main/res/layout/fragment_oquv_qollanma.xml" value="0.12434210526315789" />
         <entry key="app/src/main/res/layout/fragment_pictures.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/fragment_presentations.xml" value="0.1581196581196581" />
         <entry key="app/src/main/res/layout/fragment_questions.xml" value="0.1581196581196581" />

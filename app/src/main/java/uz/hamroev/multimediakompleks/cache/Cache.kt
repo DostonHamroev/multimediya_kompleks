@@ -107,5 +107,53 @@ object Cache {
             }
         }
 
+    var monografiya: String?
+        get() = sharedPreferences.getString("monografiya", "")
+        set(value) = sharedPreferences.edit() {
+            if (value != null) {
+                it.putString("monografiya", value)
+            }
+        }
+
+    var oquvQollanma: String?
+        get() = sharedPreferences.getString("oquvqollanma", "")
+        set(value) = sharedPreferences.edit() {
+            if (value != null) {
+                it.putString("oquvqollanma", value)
+            }
+        }
+
+    /* Monografoya theme */
+
+
+    var monografiya1: String?
+        get() = sharedPreferences.getString("monografiya1", "")
+        set(value) = sharedPreferences.edit() {
+            if (value != null) {
+                it.putString("monografiya1", value)
+            }
+        }
+    var monografiya2: String?
+        get() = sharedPreferences.getString("monografiya2", "")
+        set(value) = sharedPreferences.edit() {
+            if (value != null) {
+                it.putString("monografiya2", value)
+            }
+        }
+    var monografiya3: String?
+        get() = sharedPreferences.getString("monografiya3", "")
+        set(value) = sharedPreferences.edit() {
+            if (value != null) {
+                it.putString("monografiya3", value)
+            }
+        }
+    var monografiya4: String?
+        get() = sharedPreferences.getString("monografiya4", "")
+        set(value) = sharedPreferences.edit() {
+            if (value != null) {
+                it.putString("monografiya4", value)
+            }
+        }
+
 
 }

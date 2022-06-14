@@ -38,8 +38,12 @@ class ElektronKutubxonaFragment : Fragment() {
                         0 -> {
                             findNavController().navigate(R.id.autoReferatFragment)
                         }
-                        1 -> {}
-                        2 -> {}
+                        1 -> {
+                            findNavController().navigate(R.id.monografiyaFragment)
+                        }
+                        2 -> {
+                            findNavController().navigate(R.id.oquvQollanmaFragment)
+                        }
                         3 -> {
                             findNavController().navigate(R.id.biblioVaHavolaPdfFragment)
                         }

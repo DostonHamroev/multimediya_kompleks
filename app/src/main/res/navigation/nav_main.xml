@@ -70,6 +70,12 @@
         <action
             android:id="@+id/action_elektronKutubxonaFragment_to_autoReferatFragment"
             app:destination="@id/autoReferatFragment" />
+        <action
+            android:id="@+id/action_elektronKutubxonaFragment_to_monografiyaFragment"
+            app:destination="@id/monografiyaFragment" />
+        <action
+            android:id="@+id/action_elektronKutubxonaFragment_to_oquvQollanmaFragment"
+            app:destination="@id/oquvQollanmaFragment" />
     </fragment>
     <fragment
         android:id="@+id/fotoHujjatFragment"
@@ -168,4 +174,32 @@
         android:name="uz.hamroev.multimediakompleks.fragment.department.avtorefarat.AutoReferatPdfFragment"
         android:label="fragment_auto_referat_pdf"
         tools:layout="@layout/fragment_auto_referat_pdf" />
+    <fragment
+        android:id="@+id/monografiyaFragment"
+        android:name="uz.hamroev.multimediakompleks.fragment.department.monografiya.MonografiyaFragment"
+        android:label="fragment_monografiya"
+        tools:layout="@layout/fragment_monografiya" >
+        <action
+            android:id="@+id/action_monografiyaFragment_to_monografiyaPdfFragment"
+            app:destination="@id/monografiyaPdfFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/monografiyaPdfFragment"
+        android:name="uz.hamroev.multimediakompleks.fragment.department.monografiya.MonografiyaPdfFragment"
+        android:label="fragment_monografiya_pdf"
+        tools:layout="@layout/fragment_monografiya_pdf" />
+    <fragment
+        android:id="@+id/oquvQollanmaFragment"
+        android:name="uz.hamroev.multimediakompleks.fragment.department.oquvqollanma.OquvQollanmaFragment"
+        android:label="fragment_oquv_qollanma"
+        tools:layout="@layout/fragment_oquv_qollanma" >
+        <action
+            android:id="@+id/action_oquvQollanmaFragment_to_oquvQollanmaPdfFragment"
+            app:destination="@id/oquvQollanmaPdfFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/oquvQollanmaPdfFragment"
+        android:name="uz.hamroev.multimediakompleks.fragment.department.oquvqollanma.OquvQollanmaPdfFragment"
+        android:label="fragment_oquv_qollanma_pdf"
+        tools:layout="@layout/fragment_oquv_qollanma_pdf" />
 </navigation>
