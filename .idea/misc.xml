@@ -6,25 +6,32 @@
         <entry key="../../../../layout/custom_preview.xml" value="0.22135416666666666" />
         <entry key="app/src/main/res/drawable/back_department.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/back_main_linear.xml" value="0.1205" />
+        <entry key="app/src/main/res/drawable/back_nav.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/back_theme.xml" value="0.136" />
+        <entry key="app/src/main/res/drawable/back_theme_ripple.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/background.xml" value="0.136" />
         <entry key="app/src/main/res/drawable/ic_back.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/ic_book.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/ic_crossword.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/ic_documents.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/ic_electron_library.xml" value="0.1515" />
+        <entry key="app/src/main/res/drawable/ic_exit.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/ic_flag_rus.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_home.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/ic_images.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/ic_maps.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/ic_menu.xml" value="0.1215" />
         <entry key="app/src/main/res/drawable/ic_questions.xml" value="0.1515" />
+        <entry key="app/src/main/res/drawable/ic_rate.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/ic_seminar.xml" value="0.2045" />
+        <entry key="app/src/main/res/drawable/ic_share.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/ic_subject.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/ic_swot.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/ic_test.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/ic_tezaurus.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/ic_theme_library.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/ic_users.xml" value="0.1515" />
+        <entry key="app/src/main/res/drawable/ic_users_white.xml" value="0.1515" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/activity_pdf_show.xml" value="0.19791666666666666" />
@@ -49,7 +56,7 @@
         <entry key="app/src/main/res/layout/fragment_meyoriy_pdf.xml" value="0.196875" />
         <entry key="app/src/main/res/layout/fragment_monografiya.xml" value="0.12434210526315789" />
         <entry key="app/src/main/res/layout/fragment_monografiya_pdf.xml" value="0.12434210526315789" />
-        <entry key="app/src/main/res/layout/fragment_mualliflar.xml" value="0.196875" />
+        <entry key="app/src/main/res/layout/fragment_mualliflar.xml" value="0.13" />
         <entry key="app/src/main/res/layout/fragment_nazorat_savollari.xml" value="0.196875" />
         <entry key="app/src/main/res/layout/fragment_oquv_qollanma.xml" value="0.12434210526315789" />
         <entry key="app/src/main/res/layout/fragment_oquv_qollanma_pdf.xml" value="0.12434210526315789" />
@@ -67,9 +74,11 @@
         <entry key="app/src/main/res/layout/item_deparment.xml" value="0.37590711175616837" />
         <entry key="app/src/main/res/layout/item_main.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/item_map.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/item_nav.xml" value="0.12434210526315789" />
         <entry key="app/src/main/res/layout/item_round.xml" value="0.19583333333333333" />
         <entry key="app/src/main/res/layout/item_section.xml" value="0.2" />
         <entry key="app/src/main/res/layout/item_theme.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/item_users.xml" value="0.18" />
       </map>
     </option>
   </component>

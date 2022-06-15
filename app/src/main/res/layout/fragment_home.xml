@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:layout_gravity="start"
     android:fitsSystemWindows="true"
-    tools:context=".fragment.HomeFragment">
+    tools:context=".fragment.HomeFragment"
+    tools:openDrawer="start">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -185,7 +186,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="#B31A1A1A"
+        android:background="#F6F6F6"
         android:fitsSystemWindows="true">
 
         <LinearLayout
@@ -206,14 +207,16 @@
                     <include
                         layout="@layout/header_main"
                         android:layout_width="match_parent"
-                        android:layout_height="270dp" />
+                        android:layout_height="270dp"
+                        android:layout_marginTop="50dp" />
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rv_nav"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:overScrollMode="never"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_nav" />
 
 
                 </LinearLayout>

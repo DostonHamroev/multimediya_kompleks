@@ -1,7 +1,9 @@
 package uz.hamroev.multimediakompleks.fragment
 
+import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,11 +15,13 @@ import uz.hamroev.multimediakompleks.R
 import uz.hamroev.multimediakompleks.activity.TestActivity
 import uz.hamroev.multimediakompleks.adapter.DepartmentAdapter
 import uz.hamroev.multimediakompleks.adapter.MainAdapter
+import uz.hamroev.multimediakompleks.adapter.NavAdapter
 import uz.hamroev.multimediakompleks.adapter.RoundAdapter
 import uz.hamroev.multimediakompleks.cache.Cache
 import uz.hamroev.multimediakompleks.databinding.FragmentHomeBinding
 import uz.hamroev.multimediakompleks.model.Department
 import uz.hamroev.multimediakompleks.model.Main
+import uz.hamroev.multimediakompleks.model.Nav
 import uz.hamroev.multimediakompleks.model.Round
 import java.util.*
 import kotlin.collections.ArrayList
@@ -35,6 +39,11 @@ class HomeFragment : Fragment() {
 
 
     lateinit var dataPasser: OnDataPass
+
+
+    private lateinit var listNav: ArrayList<Nav>
+    private lateinit var navAdapter: NavAdapter
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -153,8 +162,70 @@ class HomeFragment : Fragment() {
         binding.rvDepartment.adapter = departmentAdapter
 
 
+        loadNav()
+        navAdapter = NavAdapter(ct, listNav, object : NavAdapter.OnNavClickListener {
+            override fun onCLick(nav: Nav, position: Int) {
+                when (position) {
+                    0 -> {
+                        findNavController().popBackStack()
+                        findNavController().navigate(R.id.homeFragment)
+                        binding.drawerLayout.closeDrawers()
+                    }
+                    1 -> {
+
+                        findNavController().popBackStack()
+                        findNavController().navigate(R.id.mualliflarFragment)
+                        binding.drawerLayout.closeDrawers()
+                    }
+                    2 -> {
+                        try {
+                            val intent = Intent(Intent.ACTION_SEND)
+                            intent.type = "text/plain"
+                            intent.putExtra(Intent.EXTRA_SUBJECT, "Мультимедиа комплекс")
+                            val shareMessage =
+                                "https://play.google.com/store/apps/details?id=${activity!!.packageName}"
+                            intent.putExtra(Intent.EXTRA_TEXT, shareMessage)
+                            startActivity(Intent.createChooser(intent, "share by Doston"))
+                        } catch (e: Exception) {
+                        }
+                        binding.drawerLayout.closeDrawers()
+                    }
+                    3 -> {
+                        try {
+                            val uri: Uri =
+                                Uri.parse("market://details?id=${activity!!.packageName}")
+                            val intent = Intent(Intent.ACTION_VIEW, uri)
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                            startActivity(intent)
+                        } catch (e: ActivityNotFoundException) {
+                            val uri: Uri =
+                                Uri.parse("http://play.google.com/store/apps/details?id=${activity!!.packageName}")
+                            val intent = Intent(Intent.ACTION_VIEW, uri)
+                            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                            startActivity(intent)
+                        }
+                        binding.drawerLayout.closeDrawers()
+                    }
+                    4 -> {
+                        findNavController().popBackStack()
+                        activity?.finish()
+                    }
+                }
+            }
+        })
+        binding.rvNav.adapter = navAdapter
+
 
         return binding.root
+    }
+
+    private fun loadNav() {
+        listNav = ArrayList()
+        listNav.add(Nav("Главный", R.drawable.ic_home))
+        listNav.add(Nav("Авторы", R.drawable.ic_users_white))
+        listNav.add(Nav("Поделиться", R.drawable.ic_share))
+        listNav.add(Nav("Оценивать", R.drawable.ic_rate))
+        listNav.add(Nav("Выход", R.drawable.ic_exit))
     }
 
     fun passData(data: String) {
