@@ -172,9 +172,8 @@ class HomeFragment : Fragment() {
                         binding.drawerLayout.closeDrawers()
                     }
                     1 -> {
-
                         findNavController().popBackStack()
-                        findNavController().navigate(R.id.mualliflarFragment)
+                        findNavController().navigate(R.id.userFragment)
                         binding.drawerLayout.closeDrawers()
                     }
                     2 -> {
@@ -221,11 +220,11 @@ class HomeFragment : Fragment() {
 
     private fun loadNav() {
         listNav = ArrayList()
-        listNav.add(Nav("Главный", R.drawable.ic_home))
-        listNav.add(Nav("Авторы", R.drawable.ic_users_white))
-        listNav.add(Nav("Поделиться", R.drawable.ic_share))
-        listNav.add(Nav("Оценивать", R.drawable.ic_rate))
-        listNav.add(Nav("Выход", R.drawable.ic_exit))
+        listNav.add(Nav("Asosiy", R.drawable.ic_home))
+        listNav.add(Nav("Mualliflar", R.drawable.ic_users_white))
+        listNav.add(Nav("Bo'lishish", R.drawable.ic_share))
+        listNav.add(Nav("Baholash", R.drawable.ic_rate))
+        listNav.add(Nav("Chiqish", R.drawable.ic_exit))
     }
 
     fun passData(data: String) {
@@ -237,56 +236,56 @@ class HomeFragment : Fragment() {
         listDepartment.add(
             Department(
                 R.drawable.ic_seminar,
-                "Семинарлар",
+                "Seminarlar",
                 Cache.seminarfoiz!!.toShort()
             )
         )
         listDepartment.add(
             Department(
                 R.drawable.ic_subject,
-                "Маъруза",
+                "Ma'ruzalar",
                 Cache.maruzafoiz!!.toShort()
             )
         )
         listDepartment.add(
             Department(
                 R.drawable.ic_images,
-                "Фотоҳужжатлар",
+                "Fotohujjatlar",
                 Cache.fotohujjatfoiz!!.toShort()
             )
         )
         listDepartment.add(
             Department(
                 R.drawable.ic_documents,
-                "Меъёрий хужжатлар",
+                "Me'yoriy Hujjatlar",
                 Cache.meyoriyhujjatfoiz!!.toShort()
             )
         )
         listDepartment.add(
             Department(
                 R.drawable.ic_electron_library,
-                "Электрон библиография",
+                "Elektron Bibliografiya",
                 Cache.elektronbibiofoiz!!.toShort()
             )
         )
         listDepartment.add(
             Department(
                 R.drawable.ic_theme_library,
-                "Мавзулар бўйича еклекрон кутубхона",
+                "Mavzular bo'yicha elektron kutubxona",
                 Cache.maruzalarboyichakutubxonafoiz!!.toShort()
             )
         )
         listDepartment.add(
             Department(
                 R.drawable.ic_maps,
-                "Ҳариталар",
+                "Xaritalar",
                 Cache.haritafoiz!!.toShort()
             )
         )
         listDepartment.add(
             Department(
                 R.drawable.ic_crossword,
-                "Кроссвордлар",
+                "Krossvordlar",
                 Cache.krosswordfoiz!!.toShort()
             )
         )
@@ -294,19 +293,19 @@ class HomeFragment : Fragment() {
         listDepartment.add(
             Department(
                 R.drawable.ic_tezaurus,
-                "Тезаурус",
+                "Tezaurus",
                 Cache.tezarurusfoiz!!.toShort()
             )
         )
-        listDepartment.add(Department(R.drawable.ic_test, "Тестлар", Cache.testfoiz!!.toShort()))
+        listDepartment.add(Department(R.drawable.ic_test, "Testlar", Cache.testfoiz!!.toShort()))
         listDepartment.add(
             Department(
                 R.drawable.ic_questions,
-                "Назорат саволлари",
+                "Nazorat Savollari",
                 Cache.nazoratsavollarifoiz!!.toShort()
             )
         )
-        listDepartment.add(Department(R.drawable.ic_users, "Муалиффлар", 100))
+        listDepartment.add(Department(R.drawable.ic_users, "Mualliflar", 100))
 
     }
 

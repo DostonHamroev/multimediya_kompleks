@@ -58,6 +58,9 @@
         <action
             android:id="@+id/action_homeFragment_to_elektronKutubxonaFragment"
             app:destination="@id/elektronKutubxonaFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_userFragment"
+            app:destination="@id/userFragment" />
     </fragment>
     <fragment
         android:id="@+id/elektronKutubxonaFragment"
@@ -202,4 +205,9 @@
         android:name="uz.hamroev.multimediakompleks.fragment.department.oquvqollanma.OquvQollanmaPdfFragment"
         android:label="fragment_oquv_qollanma_pdf"
         tools:layout="@layout/fragment_oquv_qollanma_pdf" />
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="uz.hamroev.multimediakompleks.fragment.department.users.UserFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" />
 </navigation>

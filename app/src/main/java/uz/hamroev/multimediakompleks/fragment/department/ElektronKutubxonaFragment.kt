@@ -66,10 +66,10 @@ class ElektronKutubxonaFragment : Fragment() {
 
     private fun loadSection() {
         list = ArrayList()
-        list.add(Section(R.drawable.ic_seminar, "Автореферат"))
-        list.add(Section(R.drawable.ic_seminar, "Монография"))
-        list.add(Section(R.drawable.ic_seminar, "Ўқув қулланма ва бошқа"))
-        list.add(Section(R.drawable.ic_seminar, "Библиография ва ҳавола"))
+        list.add(Section(R.drawable.ic_seminar, "Avtorefetratlar"))
+        list.add(Section(R.drawable.ic_seminar, "Monografiyalar"))
+        list.add(Section(R.drawable.ic_seminar, "O'quv qo'llanma \nva boshqalar"))
+        list.add(Section(R.drawable.ic_seminar, "Bibliografiya \nva havolalar"))
     }
 
 

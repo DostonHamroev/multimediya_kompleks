@@ -81,7 +81,7 @@ class MeyoriyHujjatFragment : Fragment() {
         list.add(Theme("Qatag‘on qurbonlari xotirasi» muzeyining faoliyatini yanada takomillashtirish to‘g‘risida "))
         list.add(Theme("“Qatag‘on qurbonlari xotirasi muzeylari hamda «Shahidlar xotirasi» jamoat fondini qo‘llab-quvvatlash” to‘g‘risida "))
         list.add(Theme("Qatag‘on qurbonlari xotirasi muzeylarini tashkil etish chora-tadbirlari to‘g‘risida  "))
-        list.add(Theme("Меъёрий хужжатларнинг гиперсылкаси"))
+        list.add(Theme("Me'yoriy Hujjatlar"))
     }
 
 
