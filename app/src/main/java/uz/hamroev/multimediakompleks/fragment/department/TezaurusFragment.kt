@@ -30,9 +30,21 @@ class TezaurusFragment : Fragment() {
 
 
         Cache.tezarurusfoiz = 100
-        checkIsDownload()
         binding.backBtn.setOnClickListener {
             findNavController().popBackStack()
+        }
+
+        when (Cache.language) {
+            "ru" -> {
+                binding.second.visibility = View.GONE
+                binding.pdfLinear.visibility = View.VISIBLE
+                binding.pdfView2.fromAsset("tezaurus_ru.pdf").show()
+            }
+            "uz" -> {
+                binding.second.visibility = View.VISIBLE
+                binding.pdfLinear.visibility = View.GONE
+                checkIsDownload()
+            }
         }
 
         return binding.root

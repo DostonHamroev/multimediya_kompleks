@@ -34,38 +34,57 @@ class MeyoriyHujjatFragment : Fragment() {
         themeAdapter =
             ThemeAdapter(binding.root.context, list, object : ThemeAdapter.OnMainClickListener {
                 override fun onClick(theme: Theme, position: Int) {
-                    when (position) {
-                        0 -> {
-                            Cache.meyoriyhujjatfoiz = 17
-                            findNavController().navigate(R.id.meyoriyPdfFragment)
-                            Cache.doc1 = "1"
+                    when (Cache.language) {
+                        "ru" -> {
+                            when(position){
+                                0->{
+                                    Cache.meyoriyhujjatfoiz = 50
+                                    findNavController().navigate(R.id.meyoriyPdfFragment)
+                                    Cache.doc1 = "1ru"
+                                }
+                                1->{
+                                    Cache.meyoriyhujjatfoiz = 100
+                                    findNavController().navigate(R.id.meyoriyPdfFragment)
+                                    Cache.doc1 = "2ru"
+                                }
+                            }
                         }
-                        1 -> {
-                            Cache.meyoriyhujjatfoiz = 33
-                            findNavController().navigate(R.id.meyoriyPdfFragment)
-                            Cache.doc1 = "2"
-                        }
-                        2 -> {
-                            Cache.meyoriyhujjatfoiz = 50
-                            findNavController().navigate(R.id.meyoriyPdfFragment)
-                            Cache.doc1 = "3"
-                        }
-                        3 -> {
-                            Cache.meyoriyhujjatfoiz = 67
-                            findNavController().navigate(R.id.meyoriyPdfFragment)
-                            Cache.doc1 = "4"
-                        }
-                        4 -> {
-                            Cache.meyoriyhujjatfoiz = 84
-                            findNavController().navigate(R.id.meyoriyPdfFragment)
-                            Cache.doc1 = "5"
-                        }
-                        5 -> {
-                            Cache.meyoriyhujjatfoiz = 100
-                            findNavController().navigate(R.id.meyoriyPdfFragment)
-                            Cache.doc1 = "6"
+                        "uz" -> {
+                            when (position) {
+                                0 -> {
+                                    Cache.meyoriyhujjatfoiz = 17
+                                    findNavController().navigate(R.id.meyoriyPdfFragment)
+                                    Cache.doc1 = "1"
+                                }
+                                1 -> {
+                                    Cache.meyoriyhujjatfoiz = 33
+                                    findNavController().navigate(R.id.meyoriyPdfFragment)
+                                    Cache.doc1 = "2"
+                                }
+                                2 -> {
+                                    Cache.meyoriyhujjatfoiz = 50
+                                    findNavController().navigate(R.id.meyoriyPdfFragment)
+                                    Cache.doc1 = "3"
+                                }
+                                3 -> {
+                                    Cache.meyoriyhujjatfoiz = 67
+                                    findNavController().navigate(R.id.meyoriyPdfFragment)
+                                    Cache.doc1 = "4"
+                                }
+                                4 -> {
+                                    Cache.meyoriyhujjatfoiz = 84
+                                    findNavController().navigate(R.id.meyoriyPdfFragment)
+                                    Cache.doc1 = "5"
+                                }
+                                5 -> {
+                                    Cache.meyoriyhujjatfoiz = 100
+                                    findNavController().navigate(R.id.meyoriyPdfFragment)
+                                    Cache.doc1 = "6"
+                                }
+                            }
                         }
                     }
+
                 }
             })
         binding.rvTheme.adapter = themeAdapter
@@ -76,12 +95,22 @@ class MeyoriyHujjatFragment : Fragment() {
 
     private fun loadTheme() {
         list = ArrayList()
-        list.add(Theme("“Qatag‘on qurbonlarining merosini yanada chuqur o‘rganish va ular xotirasini abadiylashtirishga” doir qo‘shimcha chora-tadbirlar to‘g‘risida"))
-        list.add(Theme("“Qatag‘on qurbonlari xotirasi” muzeyi faoliyatini tashkil etish to‘g‘risida"))
-        list.add(Theme("Qatag‘on qurbonlari xotirasi» muzeyining faoliyatini yanada takomillashtirish to‘g‘risida "))
-        list.add(Theme("“Qatag‘on qurbonlari xotirasi muzeylari hamda «Shahidlar xotirasi» jamoat fondini qo‘llab-quvvatlash” to‘g‘risida "))
-        list.add(Theme("Qatag‘on qurbonlari xotirasi muzeylarini tashkil etish chora-tadbirlari to‘g‘risida  "))
-        list.add(Theme("Me'yoriy Hujjatlar"))
+
+        when (Cache.language) {
+            "ru" -> {
+                list.add(Theme("О дополнительных мерах по более глубокому изучению наследия и увековечению памяти жертв репрессий"))
+                list.add(Theme("Об утверждении концепции развития науки до 2030 года"))
+            }
+            "uz" -> {
+                list.add(Theme("“Qatag‘on qurbonlarining merosini yanada chuqur o‘rganish va ular xotirasini abadiylashtirishga” doir qo‘shimcha chora-tadbirlar to‘g‘risida"))
+                list.add(Theme("“Qatag‘on qurbonlari xotirasi” muzeyi faoliyatini tashkil etish to‘g‘risida"))
+                list.add(Theme("Qatag‘on qurbonlari xotirasi» muzeyining faoliyatini yanada takomillashtirish to‘g‘risida "))
+                list.add(Theme("“Qatag‘on qurbonlari xotirasi muzeylari hamda «Shahidlar xotirasi» jamoat fondini qo‘llab-quvvatlash” to‘g‘risida "))
+                list.add(Theme("Qatag‘on qurbonlari xotirasi muzeylarini tashkil etish chora-tadbirlari to‘g‘risida  "))
+                list.add(Theme("Me'yoriy Hujjatlar"))
+            }
+        }
+
     }
 
 

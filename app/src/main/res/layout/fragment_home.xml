@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="start"
-    android:fitsSystemWindows="true"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
     tools:context=".fragment.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -65,6 +65,7 @@
                         android:layout_weight="1">
 
                         <TextView
+                            android:id="@+id/app_title"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:fontFamily="@font/poppins_medium"
@@ -72,7 +73,7 @@
                             android:padding="10dp"
                             android:text="Multimedia \nKompleks"
                             android:textColor="@color/white"
-                            android:textSize="20sp"
+                            android:textSize="14sp"
                             android:textStyle="bold" />
                     </LinearLayout>
 
@@ -132,7 +133,7 @@
                             android:paddingTop="5dp"
                             android:paddingRight="10dp"
                             android:paddingBottom="5dp"
-                            android:text="Bo'limlar"
+                            android:text="@string/bolimlar"
                             android:textColor="@color/black"
                             android:textSize="14sp"
                             android:textStyle="normal" />
@@ -153,7 +154,7 @@
                             android:paddingTop="5dp"
                             android:paddingRight="10dp"
                             android:paddingBottom="5dp"
-                            android:text="Bo'limlar"
+                            android:text="@string/bolimlar"
                             android:textColor="@color/black"
                             android:textSize="14sp"
                             android:textStyle="normal" />

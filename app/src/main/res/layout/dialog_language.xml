@@ -83,6 +83,7 @@
 
             <LinearLayout
                 android:id="@+id/uk"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -141,6 +142,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
+                android:visibility="gone"
                 android:background="@color/grey_line" />
 
             <LinearLayout

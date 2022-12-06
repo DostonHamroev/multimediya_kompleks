@@ -10,9 +10,20 @@
     <string name="crossword">Crossword</string>
     <string name="swot">Swot</string>
     <string name="pictures">Rasmlar</string>
-    <string name="questions">Nazorat\nSavollari</string>
-    <string name="documentation">Me\'yoriy\nHujjatlar</string>
+    <string name="questions">Nazorat\nsavollari</string>
+    <string name="documentation">Me\'yoriy hujjatlar</string>
     <string name="authors">Mualliflar</string>
+
+    <string name="fotohujjar">Foto hujjatlar</string>
+    <string name="krosswordlar">Krossvordlar</string>
+    <string name="tezaurus">Tezaurus</string>
+    <string name="nazorat_savollari">Nazorat savollari</string>
+    <string name="xaritalar">Xaritalar</string>
+    <string name="elektron_bibliografiya">Elektron bibliografiya</string>
+    <string name="mavzu_boyicha">Mavzular bo\'yicha elektron kutubxona</string>
+
+    <string name="bolimlar">Bo\'limlar</string>
+
     <string name="language_rus">Russian</string>
     <string name="language_eng">English</string>
     <string name="language_uzb">Uzbek</string>

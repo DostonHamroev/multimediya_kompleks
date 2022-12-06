@@ -61,6 +61,7 @@
                 android:layout_height="200dp"
                 android:layout_gravity="center"
                 android:padding="15dp"
+                android:visibility="gone"
                 app:lottie_autoPlay="true"
                 app:lottie_fileName="download.json"
                 app:lottie_loop="true"
@@ -70,14 +71,14 @@
                 android:id="@+id/pdf_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:visibility="gone" />
+                android:visibility="visible" />
 
             <ProgressBar
-                android:visibility="gone"
                 android:id="@+id/progress"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:visibility="gone" />
 
 
         </LinearLayout>

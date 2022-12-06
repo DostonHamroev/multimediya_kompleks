@@ -52,7 +52,7 @@ class OquvQollanmaPdfFragment : Fragment() {
     private fun checkIsDownload(number: Int) {
         when (number) {
             1 -> {
-                 try {
+                try {
                     if (Cache.oquvqollanma1 == "") {
                         Log.d(TAG, "checkIsDownload: FIle not Download")
                         pdfDownloadMain(1)
@@ -66,7 +66,7 @@ class OquvQollanmaPdfFragment : Fragment() {
 
             }
             2 -> {
-                 try {
+                try {
                     if (Cache.oquvqollanma2 == "") {
                         Log.d(TAG, "checkIsDownload: FIle not Download")
                         pdfDownloadMain(2)
@@ -80,7 +80,7 @@ class OquvQollanmaPdfFragment : Fragment() {
 
             }
             3 -> {
-                 try {
+                try {
                     if (Cache.oquvqollanma3 == "") {
                         Log.d(TAG, "checkIsDownload: FIle not Download")
                         pdfDownloadMain(3)
@@ -94,7 +94,7 @@ class OquvQollanmaPdfFragment : Fragment() {
 
             }
             4 -> {
-                 try {
+                try {
                     if (Cache.oquvqollanma4 == "") {
                         Log.d(TAG, "checkIsDownload: FIle not Download")
                         pdfDownloadMain(4)
@@ -108,7 +108,7 @@ class OquvQollanmaPdfFragment : Fragment() {
 
             }
             5 -> {
-                 try {
+                try {
                     if (Cache.oquvqollanma5 == "") {
                         Log.d(TAG, "checkIsDownload: FIle not Download")
                         pdfDownloadMain(5)
@@ -122,7 +122,7 @@ class OquvQollanmaPdfFragment : Fragment() {
 
             }
             6 -> {
-                 try {
+                try {
                     if (Cache.oquvqollanma6 == "") {
                         Log.d(TAG, "checkIsDownload: FIle not Download")
                         pdfDownloadMain(6)
@@ -136,7 +136,7 @@ class OquvQollanmaPdfFragment : Fragment() {
 
             }
             7 -> {
-                 try {
+                try {
                     if (Cache.oquvqollanma7 == "") {
                         Log.d(TAG, "checkIsDownload: FIle not Download")
                         pdfDownloadMain(7)
@@ -150,7 +150,7 @@ class OquvQollanmaPdfFragment : Fragment() {
 
             }
             8 -> {
-                 try {
+                try {
                     if (Cache.oquvqollanma8 == "") {
                         Log.d(TAG, "checkIsDownload: FIle not Download")
                         pdfDownloadMain(8)
@@ -164,7 +164,7 @@ class OquvQollanmaPdfFragment : Fragment() {
 
             }
             9 -> {
-                 try {
+                try {
                     if (Cache.oquvqollanma9 == "") {
                         Log.d(TAG, "checkIsDownload: FIle not Download")
                         pdfDownloadMain(9)
@@ -178,7 +178,7 @@ class OquvQollanmaPdfFragment : Fragment() {
 
             }
             10 -> {
-                 try {
+                try {
                     if (Cache.oquvqollanma10 == "") {
                         Log.d(TAG, "checkIsDownload: FIle not Download")
                         pdfDownloadMain(10)
@@ -192,7 +192,7 @@ class OquvQollanmaPdfFragment : Fragment() {
 
             }
             11 -> {
-                 try {
+                try {
                     if (Cache.oquvqollanma11 == "") {
                         Log.d(TAG, "checkIsDownload: FIle not Download")
                         pdfDownloadMain(11)
@@ -206,7 +206,7 @@ class OquvQollanmaPdfFragment : Fragment() {
 
             }
             12 -> {
-                 try {
+                try {
                     if (Cache.oquvqollanma12 == "") {
                         Log.d(TAG, "checkIsDownload: FIle not Download")
                         pdfDownloadMain(12)
@@ -220,7 +220,7 @@ class OquvQollanmaPdfFragment : Fragment() {
 
             }
             13 -> {
-                 try {
+                try {
                     if (Cache.oquvqollanma13 == "") {
                         Log.d(TAG, "checkIsDownload: FIle not Download")
                         pdfDownloadMain(13)
@@ -234,7 +234,7 @@ class OquvQollanmaPdfFragment : Fragment() {
 
             }
             14 -> {
-                 try {
+                try {
                     if (Cache.oquvqollanma14 == "") {
                         Log.d(TAG, "checkIsDownload: FIle not Download")
                         pdfDownloadMain(14)
@@ -248,7 +248,7 @@ class OquvQollanmaPdfFragment : Fragment() {
 
             }
             15 -> {
-                 try {
+                try {
                     if (Cache.oquvqollanma15 == "") {
                         Log.d(TAG, "checkIsDownload: FIle not Download")
                         pdfDownloadMain(15)
@@ -262,7 +262,7 @@ class OquvQollanmaPdfFragment : Fragment() {
 
             }
             16 -> {
-                 try {
+                try {
                     if (Cache.oquvqollanma16 == "") {
                         Log.d(TAG, "checkIsDownload: FIle not Download")
                         pdfDownloadMain(16)
@@ -276,7 +276,7 @@ class OquvQollanmaPdfFragment : Fragment() {
 
             }
             17 -> {
-                 try {
+                try {
                     if (Cache.oquvqollanma17 == "") {
                         Log.d(TAG, "checkIsDownload: FIle not Download")
                         pdfDownloadMain(17)
@@ -290,7 +290,7 @@ class OquvQollanmaPdfFragment : Fragment() {
 
             }
             18 -> {
-                 try {
+                try {
                     if (Cache.oquvqollanma18 == "") {
                         Log.d(TAG, "checkIsDownload: FIle not Download")
                         pdfDownloadMain(18)
@@ -304,7 +304,7 @@ class OquvQollanmaPdfFragment : Fragment() {
 
             }
             19 -> {
-                 try {
+                try {
                     if (Cache.oquvqollanma19 == "") {
                         Log.d(TAG, "checkIsDownload: FIle not Download")
                         pdfDownloadMain(19)
@@ -318,7 +318,7 @@ class OquvQollanmaPdfFragment : Fragment() {
 
             }
             20 -> {
-                 try {
+                try {
                     if (Cache.oquvqollanma20 == "") {
                         Log.d(TAG, "checkIsDownload: FIle not Download")
                         pdfDownloadMain(20)
@@ -332,7 +332,7 @@ class OquvQollanmaPdfFragment : Fragment() {
 
             }
             21 -> {
-                 try {
+                try {
                     if (Cache.oquvqollanma21 == "") {
                         Log.d(TAG, "checkIsDownload: FIle not Download")
                         pdfDownloadMain(21)
@@ -346,7 +346,7 @@ class OquvQollanmaPdfFragment : Fragment() {
 
             }
             22 -> {
-                 try {
+                try {
                     if (Cache.oquvqollanma22 == "") {
                         Log.d(TAG, "checkIsDownload: FIle not Download")
                         pdfDownloadMain(22)

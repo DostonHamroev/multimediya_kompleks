@@ -36,10 +36,14 @@ class FotoHujjatFragment : Fragment() {
     ): View {
         binding = FragmentFotoHujjatBinding.inflate(layoutInflater, container, false)
 
-        checkIsDownload()
+        //checkIsDownload()
         binding.backBtn.setOnClickListener {
             findNavController().popBackStack()
         }
+        binding.lottieAnimation.visibility = View.GONE
+        binding.progress.visibility = View.GONE
+        binding.pdfView.visibility = View.VISIBLE
+        binding.pdfView.fromAsset("foto2.pdf").show()
 
         return binding.root
     }
@@ -71,13 +75,22 @@ class FotoHujjatFragment : Fragment() {
         binding.lottieAnimation.setOnClickListener {
             binding.lottieAnimation.visibility = View.GONE
             binding.progress.visibility = View.VISIBLE
+            var id = ""
+            when(Cache.language){
+                "ru"->{
+                    id = "1b8b2M-I6TmR6SNFhAk2iwSE5FfAK56pD"
+                }
+                "uz"->{
+                    id = "1pWxDalXWs0425XN7FDm19DOWAlVEk9dC"
+                }
+            }
             val service = ApiClientPdf().service
-            service.getPdf("u/0/uc?id=1pWxDalXWs0425XN7FDm19DOWAlVEk9dC&export=download")
+            service.getPdf("u/0/uc?id=${id}&export=download")
                 .enqueue(object : Callback<ResponseBody> {
 
                     val context = binding.root.context
                     val path =
-                        "${context.filesDir.absolutePath}/fotohujjatlar.pdf"
+                        "${context.filesDir.absolutePath}/fotohujjatlar${id}.pdf"
 
                     override fun onResponse(
                         call: Call<ResponseBody>?,

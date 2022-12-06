@@ -31,7 +31,15 @@ class SeminarFragment : Fragment() {
     }
 
     private fun loadPdf() {
-        binding.pdfView.fromAsset("seminar.pdf").show()
+        when (Cache.language) {
+            "ru" -> {
+                binding.pdfView.fromAsset("seminar_ru.pdf").show()
+
+            }
+            "uz" -> {
+                binding.pdfView.fromAsset("seminar.pdf").show()
+            }
+        }
     }
 
     override fun onResume() {

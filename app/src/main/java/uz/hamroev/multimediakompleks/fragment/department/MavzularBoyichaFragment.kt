@@ -34,7 +34,14 @@ class MavzularBoyichaFragment : Fragment() {
     }
 
     private fun loadPdf() {
-        binding.pdfView.fromAsset("mavzu_boyicha.pdf").show()
+        when (Cache.language) {
+            "ru" -> {
+                binding.pdfView.fromAsset("mavzu_boyicha_elektron_kutubxona_ru.pdf").show()
+            }
+            "uz" -> {
+                binding.pdfView.fromAsset("mavzu_boyicha.pdf").show()
+            }
+        }
     }
 
 

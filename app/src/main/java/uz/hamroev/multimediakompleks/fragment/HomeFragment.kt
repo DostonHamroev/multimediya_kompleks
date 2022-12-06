@@ -3,6 +3,8 @@ package uz.hamroev.multimediakompleks.fragment
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,12 +14,14 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import uz.hamroev.eclipse.onDataPass.OnDataPass
 import uz.hamroev.multimediakompleks.R
+import uz.hamroev.multimediakompleks.activity.HomeActivity
 import uz.hamroev.multimediakompleks.activity.TestActivity
 import uz.hamroev.multimediakompleks.adapter.DepartmentAdapter
 import uz.hamroev.multimediakompleks.adapter.MainAdapter
 import uz.hamroev.multimediakompleks.adapter.NavAdapter
 import uz.hamroev.multimediakompleks.adapter.RoundAdapter
 import uz.hamroev.multimediakompleks.cache.Cache
+import uz.hamroev.multimediakompleks.databinding.DialogLanguageBinding
 import uz.hamroev.multimediakompleks.databinding.FragmentHomeBinding
 import uz.hamroev.multimediakompleks.model.Department
 import uz.hamroev.multimediakompleks.model.Main
@@ -117,23 +121,23 @@ class HomeFragment : Fragment() {
             object : DepartmentAdapter.OnDepartmentCLickListener {
                 override fun onClick(department: Department, position: Int) {
                     when (position) {
-                        0 -> { /* seminar +++++++++++*/
-                            findNavController().navigate(R.id.seminarFragment)
+                        0 -> { /* meyoriy +++++++++++*/
+                            findNavController().navigate(R.id.meyoriyHujjatFragment)
                         }
                         1 -> { /* maruza ++++++++++++++++*/
                             findNavController().navigate(R.id.maruzaFragment)
                         }
-                        2 -> { /* fotohujjat +++++++++++++++++*/
+                        2 -> { /* seminar +++++++++++++++++*/
+                            findNavController().navigate(R.id.seminarFragment)
+                        }
+                        3 -> { /* foto hujjat +++++++*/
                             findNavController().navigate(R.id.fotoHujjatFragment)
                         }
-                        3 -> { /* meyoriy hujjat +++++++*/
-                            findNavController().navigate(R.id.meyoriyHujjatFragment)
-                        }
-                        4 -> { /* elektron biografiya */
-                            findNavController().navigate(R.id.elektronKutubxonaFragment)
-                        }
-                        5 -> { /* mavzu bo'yicha maruza +++++++++++*/
+                        4 -> { /* mavzuboyicha biografiya */
                             findNavController().navigate(R.id.mavzularBoyichaFragment)
+                        }
+                        5 -> { /* elektronbibliografiya+++++++++++*/
+                            findNavController().navigate(R.id.elektronKutubxonaFragment)
                         }
                         6 -> { /* xaritalar ++++++++++*/
                             findNavController().navigate(R.id.xaritaFragment)
@@ -141,19 +145,19 @@ class HomeFragment : Fragment() {
                         7 -> { /* kroswordlar ++++++++*/
                             findNavController().navigate(R.id.kroswordFragment)
                         }
-                        8 -> { /* swot ++++++++++*/
-                            findNavController().navigate(R.id.swotFragment)
-                        }
-                        9 -> { /* tezaurus ++++++++*/
+//                        8 -> { /* swot ++++++++++*/
+//                            findNavController().navigate(R.id.swotFragment)
+//                        }
+                        8 -> { /* tezaurus ++++++++*/
                             findNavController().navigate(R.id.tezaurusFragment)
                         }
-                        10 -> { /* testlar++++++++++++++ */
+                        9 -> { /* testlar++++++++++++++ */
                             findNavController().navigate(R.id.testFragment)
                         }
-                        11 -> { /* nazorat savollari +++++++++++*/
+                        10 -> { /* nazorat savollari +++++++++++*/
                             findNavController().navigate(R.id.nazoratSavollariFragment)
                         }
-                        12 -> { /* mualliflar */
+                        11 -> { /* mualliflar */
                             findNavController().navigate(R.id.mualliflarFragment)
                         }
                     }
@@ -177,6 +181,41 @@ class HomeFragment : Fragment() {
                         binding.drawerLayout.closeDrawers()
                     }
                     2 -> {
+                        binding.drawerLayout.closeDrawers()
+                        val alertDialog = android.app.AlertDialog.Builder(binding.root.context)
+                        val dialog = alertDialog.create()
+                        val bindingLanguage =
+                            DialogLanguageBinding.inflate(LayoutInflater.from(requireContext()))
+                        dialog.setView(bindingLanguage.root)
+                        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+                        dialog.setCancelable(true)
+
+
+                        bindingLanguage.russian.setOnClickListener {
+                            Cache.language = "ru"
+                            setAppLocale(requireContext(), "ru")
+                            findNavController().popBackStack()
+                            findNavController().navigate(R.id.homeFragment)
+                            dialog.dismiss()
+                        }
+//                        bindingLanguage.uk.setOnClickListener {
+//                            Cache.language = "en"
+//                            findNavController().popBackStack()
+//                            findNavController().navigate(R.id.homeFragment)
+//                            dialog.dismiss()
+//                        }
+                        bindingLanguage.uzb.setOnClickListener {
+                            Cache.language = "uz"
+                            setAppLocale(requireContext(), "uz")
+                            findNavController().popBackStack()
+                            findNavController().navigate(R.id.homeFragment)
+                            dialog.dismiss()
+                        }
+
+
+                        dialog.show()
+                    }
+                    3 -> {
                         try {
                             val intent = Intent(Intent.ACTION_SEND)
                             intent.type = "text/plain"
@@ -189,7 +228,7 @@ class HomeFragment : Fragment() {
                         }
                         binding.drawerLayout.closeDrawers()
                     }
-                    3 -> {
+                    4 -> {
                         try {
                             val uri: Uri =
                                 Uri.parse("market://details?id=${activity!!.packageName}")
@@ -205,7 +244,7 @@ class HomeFragment : Fragment() {
                         }
                         binding.drawerLayout.closeDrawers()
                     }
-                    4 -> {
+                    5 -> {
                         findNavController().popBackStack()
                         activity?.finish()
                     }
@@ -220,11 +259,28 @@ class HomeFragment : Fragment() {
 
     private fun loadNav() {
         listNav = ArrayList()
-        listNav.add(Nav("Asosiy", R.drawable.ic_home))
-        listNav.add(Nav("Mualliflar", R.drawable.ic_users_white))
-        listNav.add(Nav("Bo'lishish", R.drawable.ic_share))
-        listNav.add(Nav("Baholash", R.drawable.ic_rate))
-        listNav.add(Nav("Chiqish", R.drawable.ic_exit))
+        when (Cache.language) {
+            "ru" -> {
+                binding.appTitle.text = "Мультимедийный комплекс"
+                listNav.add(Nav("Главный", R.drawable.ic_home))
+                listNav.add(Nav("Авторы", R.drawable.ic_users_white))
+                listNav.add(Nav("Настройки", R.drawable.ic_language))
+                listNav.add(Nav("Поделиться", R.drawable.ic_share))
+                listNav.add(Nav("Оценка", R.drawable.ic_rate))
+                listNav.add(Nav("Выход", R.drawable.ic_exit))
+            }
+            "uz" -> {
+                binding.appTitle.text = "Multimedia\nKompleks"
+                listNav.add(Nav("Asosiy", R.drawable.ic_home))
+                listNav.add(Nav("Mualliflar", R.drawable.ic_users_white))
+                listNav.add(Nav("Sozlash", R.drawable.ic_language))
+                listNav.add(Nav("Bo'lishish", R.drawable.ic_share))
+                listNav.add(Nav("Baholash", R.drawable.ic_rate))
+                listNav.add(Nav("Chiqish", R.drawable.ic_exit))
+            }
+
+        }
+
     }
 
     fun passData(data: String) {
@@ -235,77 +291,89 @@ class HomeFragment : Fragment() {
         listDepartment = ArrayList()
         listDepartment.add(
             Department(
-                R.drawable.ic_seminar,
-                "Seminarlar",
+                R.drawable.ic_documents,
+                "${resources.getString(R.string.documentation)}",
                 Cache.seminarfoiz!!.toShort()
             )
         )
         listDepartment.add(
             Department(
                 R.drawable.ic_subject,
-                "Ma'ruzalar",
+                "${resources.getString(R.string.subject)}",
                 Cache.maruzafoiz!!.toShort()
             )
         )
         listDepartment.add(
             Department(
-                R.drawable.ic_images,
-                "Fotohujjatlar",
+                R.drawable.ic_seminar,
+                "${resources.getString(R.string.seminar)}",
                 Cache.fotohujjatfoiz!!.toShort()
             )
         )
         listDepartment.add(
             Department(
-                R.drawable.ic_documents,
-                "Me'yoriy Hujjatlar",
+                R.drawable.ic_images,
+                "${resources.getString(R.string.fotohujjar)}",
                 Cache.meyoriyhujjatfoiz!!.toShort()
             )
         )
         listDepartment.add(
             Department(
-                R.drawable.ic_electron_library,
-                "Elektron Bibliografiya",
+                R.drawable.ic_theme_library,
+                "${resources.getString(R.string.mavzu_boyicha)}",
                 Cache.elektronbibiofoiz!!.toShort()
             )
         )
         listDepartment.add(
             Department(
-                R.drawable.ic_theme_library,
-                "Mavzular bo'yicha elektron kutubxona",
+                R.drawable.ic_electron_library,
+                "${resources.getString(R.string.elektron_bibliografiya)}",
                 Cache.maruzalarboyichakutubxonafoiz!!.toShort()
             )
         )
         listDepartment.add(
             Department(
                 R.drawable.ic_maps,
-                "Xaritalar",
+                "${resources.getString(R.string.xaritalar)}",
                 Cache.haritafoiz!!.toShort()
             )
         )
         listDepartment.add(
             Department(
                 R.drawable.ic_crossword,
-                "Krossvordlar",
+                "${resources.getString(R.string.krosswordlar)}",
                 Cache.krosswordfoiz!!.toShort()
             )
         )
-        listDepartment.add(Department(R.drawable.ic_swot, "Swот", Cache.swotfoiz!!.toShort()))
+//        listDepartment.add(Department(R.drawable.ic_swot, "Swот", Cache.swotfoiz!!.toShort()))
         listDepartment.add(
             Department(
                 R.drawable.ic_tezaurus,
-                "Tezaurus",
+                "${resources.getString(R.string.tezaurus)}",
                 Cache.tezarurusfoiz!!.toShort()
             )
         )
-        listDepartment.add(Department(R.drawable.ic_test, "Testlar", Cache.testfoiz!!.toShort()))
+        listDepartment.add(
+            Department(
+                R.drawable.ic_test,
+                "${resources.getString(R.string.tests)}",
+                Cache.testfoiz!!.toShort()
+            )
+        )
         listDepartment.add(
             Department(
                 R.drawable.ic_questions,
-                "Nazorat Savollari",
+                "${resources.getString(R.string.nazorat_savollari)}",
                 Cache.nazoratsavollarifoiz!!.toShort()
             )
         )
-        listDepartment.add(Department(R.drawable.ic_users, "Mualliflar", 100))
+        listDepartment.add(
+            Department(
+                R.drawable.ic_users,
+                "${resources.getString(R.string.authors)}",
+                100
+            )
+        )
 
     }
 
@@ -327,5 +395,16 @@ class HomeFragment : Fragment() {
 
     }
 
+    fun setAppLocale(context: Context, language: String) {
+        val locale = Locale(language)
+        Locale.setDefault(locale)
+        val config = context.resources.configuration
+        config.setLocale(locale)
+        context.createConfigurationContext(config)
+        context.resources.updateConfiguration(
+            config,
+            context.resources.displayMetrics
+        )
+    }
 
 }

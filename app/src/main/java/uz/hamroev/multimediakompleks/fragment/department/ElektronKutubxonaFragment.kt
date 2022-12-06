@@ -29,33 +29,46 @@ class ElektronKutubxonaFragment : Fragment() {
             findNavController().popBackStack()
         }
 
-        loadSection()
-        sectionAdapter = SectionAdapter(
-            binding.root.context,
-            list,
-            object : SectionAdapter.OnSectionClickLIstener {
-                override fun onClick(section: Section, position: Int) {
-                    when (position) {
-                        0 -> {
-                            Cache.elektronbibiofoiz = 25
-                            findNavController().navigate(R.id.autoReferatFragment)
+        when (Cache.language) {
+            "ru" -> {
+                binding.second.visibility = View.GONE
+                binding.pdfLinear.visibility = View.VISIBLE
+                binding.pdfView.fromAsset("elektron_bibliografiya_ru.pdf").show()
+            }
+            "uz" -> {
+                binding.second.visibility = View.VISIBLE
+                binding.pdfLinear.visibility = View.GONE
+                loadSection()
+                sectionAdapter = SectionAdapter(
+                    binding.root.context,
+                    list,
+                    object : SectionAdapter.OnSectionClickLIstener {
+                        override fun onClick(section: Section, position: Int) {
+                            when (position) {
+                                0 -> {
+                                    Cache.elektronbibiofoiz = 25
+                                    findNavController().navigate(R.id.autoReferatFragment)
+                                }
+                                1 -> {
+                                    Cache.elektronbibiofoiz = 50
+                                    findNavController().navigate(R.id.monografiyaFragment)
+                                }
+                                2 -> {
+                                    Cache.elektronbibiofoiz = 75
+                                    findNavController().navigate(R.id.oquvQollanmaFragment)
+                                }
+                                3 -> {
+                                    Cache.elektronbibiofoiz = 100
+                                    findNavController().navigate(R.id.biblioVaHavolaPdfFragment)
+                                }
+                            }
                         }
-                        1 -> {
-                            Cache.elektronbibiofoiz = 50
-                            findNavController().navigate(R.id.monografiyaFragment)
-                        }
-                        2 -> {
-                            Cache.elektronbibiofoiz = 75
-                            findNavController().navigate(R.id.oquvQollanmaFragment)
-                        }
-                        3 -> {
-                            Cache.elektronbibiofoiz = 100
-                            findNavController().navigate(R.id.biblioVaHavolaPdfFragment)
-                        }
-                    }
-                }
-            })
-        binding.rvSection.adapter = sectionAdapter
+                    })
+                binding.rvSection.adapter = sectionAdapter
+            }
+        }
+
+
 
 
 

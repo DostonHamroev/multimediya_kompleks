@@ -30,29 +30,45 @@ class XaritaFragment : Fragment() {
         binding.backBtn.setOnClickListener {
             findNavController().popBackStack()
         }
-        loadImage()
-        mapAdapter = MapAdapter(binding.root.context, list, object : MapAdapter.OnMapClickListener {
-            override fun onCLick(map: Map, position: Int) {
-                when (position) {
-                    0 -> {}
-                    1 -> {}
-                    2 -> {}
-                    3 -> {}
-                    4 -> {}
-                    5 -> {}
-                    6 -> {}
-                    7 -> {}
-                    8 -> {}
-                    9 -> {}
-                    10 -> {}
-                    11 -> {}
-                    12 -> {}
-                    13 -> {}
-                    14 -> {}
-                }
+
+        binding.pdfView.fromAsset("xarita_ru2.pdf").show()
+
+       /* when (Cache.language) {
+            "ru" -> {
+                binding.second.visibility  = View.GONE
+                binding.pdfLinear.visibility  = View.VISIBLE
+                binding.pdfView.fromAsset("xarita_ru2.pdf").show()
             }
-        })
-        binding.rvMap.adapter = mapAdapter
+            "uz" -> {
+                binding.second.visibility  = View.VISIBLE
+                binding.pdfLinear.visibility  = View.GONE
+                loadImage()
+                mapAdapter = MapAdapter(binding.root.context, list, object : MapAdapter.OnMapClickListener {
+                    override fun onCLick(map: Map, position: Int) {
+                        when (position) {
+                            0 -> {}
+                            1 -> {}
+                            2 -> {}
+                            3 -> {}
+                            4 -> {}
+                            5 -> {}
+                            6 -> {}
+                            7 -> {}
+                            8 -> {}
+                            9 -> {}
+                            10 -> {}
+                            11 -> {}
+                            12 -> {}
+                            13 -> {}
+                            14 -> {}
+                        }
+                    }
+                })
+                binding.rvMap.adapter = mapAdapter
+            }
+        }
+        */
+
 
         return binding.root
     }

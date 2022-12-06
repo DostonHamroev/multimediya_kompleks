@@ -31,36 +31,50 @@ class KroswordFragment : Fragment() {
             findNavController().popBackStack()
         }
 
-        loadTheme()
-        themeAdapter =
-            ThemeAdapter(binding.root.context, list, object : ThemeAdapter.OnMainClickListener {
-                override fun onClick(theme: Theme, position: Int) {
-                    when (position) {
-                        0 -> {
-                            findNavController().navigate(R.id.krosswordPdfFragment)
-                            Cache.kross = "1"
-                        }
-                        1 -> {
-                            findNavController().navigate(R.id.krosswordPdfFragment)
-                            Cache.kross = "2"
-                        }
-                        2 -> {
-                            findNavController().navigate(R.id.krosswordPdfFragment)
-                            Cache.kross = "3"
-                        }
-                        3 -> {
-                            findNavController().navigate(R.id.krosswordPdfFragment)
-                            Cache.kross = "4"
-                        }
-                        4 -> {
-                            findNavController().navigate(R.id.krosswordPdfFragment)
-                            Cache.kross = "5"
-                        }
+        when (Cache.language) {
+            "ru" -> {
+                binding.second.visibility  = View.GONE
+                binding.pdfLinear.visibility  = View.VISIBLE
+                binding.pdfView.fromAsset("krossword_ru.pdf").show()
+            }
+            "uz" -> {
+                binding.second.visibility  = View.VISIBLE
+                binding.pdfLinear.visibility  = View.GONE
+                loadTheme()
+                themeAdapter =
+                    ThemeAdapter(binding.root.context, list, object : ThemeAdapter.OnMainClickListener {
+                        override fun onClick(theme: Theme, position: Int) {
+                            when (position) {
+                                0 -> {
+                                    findNavController().navigate(R.id.krosswordPdfFragment)
+                                    Cache.kross = "1"
+                                }
+                                1 -> {
+                                    findNavController().navigate(R.id.krosswordPdfFragment)
+                                    Cache.kross = "2"
+                                }
+                                2 -> {
+                                    findNavController().navigate(R.id.krosswordPdfFragment)
+                                    Cache.kross = "3"
+                                }
+                                3 -> {
+                                    findNavController().navigate(R.id.krosswordPdfFragment)
+                                    Cache.kross = "4"
+                                }
+                                4 -> {
+                                    findNavController().navigate(R.id.krosswordPdfFragment)
+                                    Cache.kross = "5"
+                                }
 
-                    }
-                }
-            })
-        binding.rvTheme.adapter = themeAdapter
+                            }
+                        }
+                    })
+                binding.rvTheme.adapter = themeAdapter
+            }
+        }
+
+
+
 
 
         return binding.root

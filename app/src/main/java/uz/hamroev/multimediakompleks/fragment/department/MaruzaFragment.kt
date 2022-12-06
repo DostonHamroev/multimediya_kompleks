@@ -20,6 +20,13 @@ class MaruzaFragment : Fragment() {
     ): View {
         binding = FragmentMaruzaBinding.inflate(layoutInflater)
 
+        /* 2 ta bo'lim
+
+        1-Период колониализма
+        2-Джадиды
+
+        */
+
         loadPdf()
         binding.backBtn.setOnClickListener {
             findNavController().popBackStack()
@@ -30,7 +37,15 @@ class MaruzaFragment : Fragment() {
     }
 
     private fun loadPdf() {
-        binding.pdfView.fromAsset("maruza.pdf").show()
+        when (Cache.language) {
+            "ru" -> {
+                binding.pdfView.fromAsset("maruza_ru.pdf").show()
+            }
+            "uz" -> {
+                binding.pdfView.fromAsset("maruza.pdf").show()
+            }
+        }
+
     }
 
     override fun onResume() {

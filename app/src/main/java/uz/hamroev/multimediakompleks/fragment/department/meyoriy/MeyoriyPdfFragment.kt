@@ -54,6 +54,14 @@ class MeyoriyPdfFragment : Fragment() {
                 Cache.meyoriyhujjatfoiz = 100
                 binding.pdfView.fromAsset("doc6.pdf").show()
             }
+            "1ru"->{
+                Cache.meyoriyhujjatfoiz = 50
+                binding.pdfView.fromAsset("normativ1ru.pdf").show()
+            }
+            "2ru"->{
+                Cache.meyoriyhujjatfoiz = 100
+                binding.pdfView.fromAsset("normativ2ru.pdf").show()
+            }
         }
     }
 

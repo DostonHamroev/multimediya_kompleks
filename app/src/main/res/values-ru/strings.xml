@@ -14,8 +14,20 @@
     <string name="swot">Swot</string>
     <string name="pictures">Фотографий</string>
     <string name="questions">Контрольные\nвопросы</string>
-    <string name="documentation">Нормативные\nдокументы</string>
+    <string name="documentation">Нормативные документы</string>
     <string name="authors">Авторы</string>
+
+    <string name="fotohujjar">Фото документы</string>
+    <string name="krosswordlar">Кроссворды</string>
+    <string name="tezaurus">Тезаурус</string>
+    <string name="nazorat_savollari">Контрольные вопросы</string>
+    <string name="xaritalar">Карты</string>
+    <string name="elektron_bibliografiya">Электронная библиография</string>
+    <string name="mavzu_boyicha">Электронная библиотека по темам</string>
+
+    <string name="bolimlar">Разделы</string>
+
+
     <string name="language_eng">Английский</string>
     <string name="language_uzb">Узбекский</string>
     <string name="language_rus">Русский</string>

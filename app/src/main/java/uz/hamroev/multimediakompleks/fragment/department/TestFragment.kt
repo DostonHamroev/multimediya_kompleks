@@ -33,7 +33,14 @@ class TestFragment : Fragment() {
     }
 
     private fun loadPdf() {
-        binding.pdfView.fromAsset("test.pdf").show()
+        when (Cache.language) {
+            "ru" -> {
+                binding.pdfView.fromAsset("test_ru.pdf").show()
+            }
+            "uz" -> {
+                binding.pdfView.fromAsset("test.pdf").show()
+            }
+        }
     }
 
 }

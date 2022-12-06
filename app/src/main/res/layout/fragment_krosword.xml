@@ -18,7 +18,6 @@
             android:layout_height="?actionBarSize"
             android:background="@color/blue2"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toTopOf="@id/second"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -47,6 +46,7 @@
             android:id="@+id/second"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:visibility="visible"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -64,7 +64,25 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/pdf_linear"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/first"
+            android:visibility="gone">
+
+            <com.pdfview.PDFView
+                android:id="@+id/pdf_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </LinearLayout>
